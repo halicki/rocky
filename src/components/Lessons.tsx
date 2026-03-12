@@ -5,7 +5,7 @@ const PACKAGES = [
     name: "Single Lesson",
     price: "400K",
     unit: "IDR / person",
-    features: ["~2 hours session", "Board & rashguard included", "Photo/video available"],
+    features: ["~90 min session", "Board & rashguard included", "Photo/video available"],
     highlighted: false,
   },
   {

@@ -41,6 +41,7 @@ Rocky is a surf instructor in Canggu, Bali. He was paying 30M IDR/year (~$1,800)
 - Tablet (768-1024px): show full nav links, hamburger only below 768px
 
 ### 2. Hero
+
 - Full-viewport height
 - Background: gradient (#0f172a → #1e3a5f → #2d6a4f) — will be replaced with a real photo later
 - Location tag: "Canggu, Bali" (small, uppercase, gold)
@@ -50,6 +51,7 @@ Rocky is a surf instructor in Canggu, Bali. He was paying 30M IDR/year (~$1,800)
 - Social proof: "⭐ 5.0 on Google Maps · 50+ reviews"
 
 ### 3. About Rocky
+
 - Two-column: photo (circle crop) + text
 - Section label: "Meet Your Instructor"
 - Name: "Rocky"
@@ -57,44 +59,49 @@ Rocky is a surf instructor in Canggu, Bali. He was paying 30M IDR/year (~$1,800)
 - Warm, personal tone
 
 ### 4. Lessons & Pricing
+
 - Two cards side by side
-- **Single Lesson:** 400K IDR — ~2 hours, board & rashguard included
+- **Single Lesson:** 400K IDR — ~90 mins, board & rashguard included
 - **3-Lesson Pack:** 1M IDR — save 200K, progress tracking, flexible scheduling
 - 3-pack highlighted as "BEST VALUE"
 - Each card has a WhatsApp booking link
 
 ### 5. Reviews
+
 - 3 review cards in a row (responsive: stack on mobile)
 - Reviews manually copy-pasted from Google Maps listing and hardcoded (no API)
 - Star rating, quote, name + country
 - Link to full Google Maps reviews
 
 ### 6. Gallery
+
 - 3x2 grid of photos (responsive: 2-column on mobile)
 - Photos from Google Maps listing
 - No lightbox in v1 — simple grid only
 
 ### 7. Final CTA
+
 - Gradient background
 - "Ready to Surf?" heading
 - Large green WhatsApp button (#25D366)
 - Contact info: location, Instagram, Google Maps link
 
 ### 8. Footer
+
 - Minimal: copyright line
 
 ## Color Palette
 
-| Token | Hex | Usage |
-|-------|-----|-------|
-| bg-primary | #0f172a | Main background |
-| bg-secondary | #1a2332 | Alternating sections |
-| accent-gold | #d4a574 | CTAs, labels, highlights |
-| ocean-blue | #1e3a5f | Gradients |
-| ocean-green | #2d6a4f | Gradients |
-| whatsapp | #25D366 | WhatsApp buttons |
-| text-primary | #ffffff | Headings |
-| text-secondary | rgba(255,255,255,0.7) | Body text |
+| Token          | Hex                   | Usage                    |
+| -------------- | --------------------- | ------------------------ |
+| bg-primary     | #0f172a               | Main background          |
+| bg-secondary   | #1a2332               | Alternating sections     |
+| accent-gold    | #d4a574               | CTAs, labels, highlights |
+| ocean-blue     | #1e3a5f               | Gradients                |
+| ocean-green    | #2d6a4f               | Gradients                |
+| whatsapp       | #25D366               | WhatsApp buttons         |
+| text-primary   | #ffffff               | Headings                 |
+| text-secondary | rgba(255,255,255,0.7) | Body text                |
 
 ## Typography
 
@@ -126,6 +133,7 @@ Rocky is a surf instructor in Canggu, Bali. He was paying 30M IDR/year (~$1,800)
 ## Content To Gather
 
 Before deployment, we need from Rocky:
+
 1. His WhatsApp number
 2. 6+ photos (or we scrape Google Maps)
 3. Short bio text (or we write it based on reviews)
