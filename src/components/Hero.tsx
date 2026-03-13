@@ -15,11 +15,15 @@ export default function Hero() {
           Canggu, Bali
         </p>
         <h1 className="mb-6 font-serif text-5xl leading-tight md:text-7xl">
-          Catch Your First Wave
+          Surf Lessons in Batu Bolong, Canggu Bali with Rocky and Team
         </h1>
         <p className="mx-auto mb-8 max-w-md text-lg text-text-secondary">
-          Professional surf lessons with a personal touch. All levels welcome —
-          from first-timers to intermediate surfers.
+          Hey, I&apos;m Rocky. I grew up in Bali and have been surfing the waves
+          here for more than 20 years. I also worked many years as a
+          professional lifeguard, so safety in the ocean is always my highest
+          priority. Together with my team of local Balinese surf instructors we
+          help people from all over the world learn surfing safely and have fun
+          in the waves of Batu Bolong.
         </p>
         <a
           href={WHATSAPP_URL}
