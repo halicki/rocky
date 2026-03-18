@@ -41,35 +41,36 @@ const REVIEWS = [
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="bg-bg-secondary px-6 py-20">
+    <section id="reviews" className="bg-bg-dark px-6 py-10 md:py-20">
       <div className="mx-auto max-w-5xl text-center">
-        <p className="mb-2 text-xs tracking-[0.15em] uppercase text-accent-gold">
+        <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
           Reviews
         </p>
-        <h2 className="mb-4 font-serif text-3xl md:text-4xl">
+        <h2 className="mb-3 font-heading text-3xl font-bold md:text-4xl">
           What Students Say
         </h2>
-        <p className="mb-12 text-sm text-text-secondary">
-          5.0 ⭐ · 82 reviews on Google Maps
+        <p className="mb-10 text-sm text-text-secondary">
+          <span className="text-accent-gold-star">★★★★★</span> 5.0 · 82 reviews
+          on Google Maps
         </p>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {REVIEWS.map((review) => (
             <div
               key={review.name}
-              className="rounded-lg bg-white/5 p-6 text-left"
+              className="rounded-xl bg-bg-card p-6 text-left"
             >
               <div className="mb-3 flex items-center justify-between">
-                <p className="text-accent-gold">
-                  {"⭐".repeat(review.stars)}
+                <p className="text-sm text-accent-gold-star">
+                  {"★".repeat(review.stars)}
                 </p>
-                <p className="text-xs text-text-secondary/40">{review.time}</p>
+                <p className="text-xs text-text-secondary/50">{review.time}</p>
               </div>
-              <p className="mb-4 text-sm leading-relaxed text-text-secondary">
+              <p className="mb-4 text-sm leading-relaxed text-text-secondary italic">
                 &ldquo;{review.text}&rdquo;
               </p>
-              <p className="text-xs font-medium text-text-secondary/70">
-                — {review.name}
+              <p className="text-sm font-semibold text-white/80">
+                {review.name}
               </p>
             </div>
           ))}
@@ -79,7 +80,7 @@ export default function Reviews() {
           href={GOOGLE_MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-10 inline-block text-sm text-accent-gold/80 transition-colors hover:text-accent-gold"
+          className="mt-8 inline-block text-sm font-semibold text-accent-blue transition-colors hover:text-accent-blue/80"
         >
           See all 82 reviews on Google Maps →
         </a>

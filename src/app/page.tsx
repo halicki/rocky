@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Lessons from "@/components/Lessons";
 import Reviews from "@/components/Reviews";
+import FAQ from "@/components/FAQ";
 import Gallery from "@/components/Gallery";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Lessons />
       <Reviews />
+      <FAQ />
       <Gallery />
       <FinalCTA />
       <Footer />

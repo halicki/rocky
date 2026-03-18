@@ -10,21 +10,39 @@ const PHOTOS = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="bg-bg-primary px-6 py-20">
+    <section id="gallery" className="bg-bg-dark px-6 py-10 md:py-20">
       <div className="mx-auto max-w-4xl text-center">
-        <p className="mb-2 text-xs tracking-[0.15em] uppercase text-accent-gold">
+        <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
           Gallery
         </p>
-        <h2 className="mb-12 font-serif text-3xl md:text-4xl">
+        <h2 className="mb-8 font-heading text-3xl font-bold md:text-4xl">
           Life on the Waves
         </h2>
 
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+        {/* Mobile: horizontal scroll carousel */}
+        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:hidden">
           {PHOTOS.map((photo, i) => (
             <div
               key={i}
-              className={`overflow-hidden rounded-lg ${
-                i === 0 ? "col-span-2 row-span-2 md:col-span-1 md:row-span-2" : ""
+              className="min-w-[80vw] shrink-0 snap-center overflow-hidden rounded-xl"
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="aspect-4/3 w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: grid layout */}
+        <div className="hidden gap-3 md:grid md:grid-cols-3">
+          {PHOTOS.map((photo, i) => (
+            <div
+              key={i}
+              className={`overflow-hidden rounded-xl ${
+                i === 0 ? "row-span-2" : ""
               }`}
             >
               <img
@@ -41,7 +59,7 @@ export default function Gallery() {
           href={GOOGLE_MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-block text-sm text-accent-gold/80 transition-colors hover:text-accent-gold"
+          className="mt-8 inline-block text-sm font-semibold text-accent-blue transition-colors hover:text-accent-blue/80"
         >
           See more photos on Google Maps →
         </a>
