@@ -4,11 +4,13 @@ export default function Footer() {
       <p className="font-heading text-sm font-semibold text-white/60">
         Surfing With Rocky
       </p>
-      <p className="mt-1 text-xs text-text-secondary/30">
-        Batu Bolong Beach · Canggu, Bali, Indonesia
-      </p>
+      <address className="mt-1 text-xs not-italic text-text-secondary/30">
+        <span>Batu Bolong Beach</span>
+        {" · "}
+        <span>Canggu, Bali, Indonesia</span>
+      </address>
       <p className="mt-2 text-xs text-text-secondary/20">
-        © {new Date().getFullYear()} All rights reserved
+        © {new Date().getFullYear()} Surfing With Rocky. All rights reserved.
       </p>
     </footer>
   );
