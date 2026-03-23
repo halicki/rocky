@@ -40,18 +40,8 @@ export default function Hero() {
         </h1>
 
         <p className="mt-5 text-base text-text-secondary md:text-lg">
-          <span className="md:hidden">
-            Safe, fun surf lessons at Batu Bolong Beach with 20+ years
-            experience. All levels welcome.
-          </span>
-          <span className="hidden md:inline">
-            Hey, I&apos;m Rocky. I grew up in Bali and have been surfing the
-            waves here for more than 20 years. I also worked many years as a
-            professional lifeguard, so safety in the ocean is always my highest
-            priority. Together with my team of local Balinese surf instructors
-            we help people from all over the world learn surfing safely and have
-            fun in the waves of Batu Bolong.
-          </span>
+          Safe, fun surf lessons at Batu Bolong Beach with 20+ years
+          experience. All levels welcome.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3 md:justify-center">
