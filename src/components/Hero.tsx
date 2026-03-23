@@ -1,28 +1,21 @@
-"use client";
-
-import { useEffect, useRef } from "react";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.play().catch(() => {});
-    }
-  }, []);
-
   return (
     <section className="relative flex min-h-screen items-end justify-center px-6 pb-24 pt-24 text-left md:items-center md:pb-0 md:text-center">
-      {/* Background video */}
+      {/* Mobile: animated WebP (no autoplay issues on iOS) */}
+      <img
+        src="/videos/hero-mobile.webp"
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover md:hidden"
+      />
+      {/* Desktop: video */}
       <video
-        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
         <source src="/videos/hero.webm" type="video/webm" />
