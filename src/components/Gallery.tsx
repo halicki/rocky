@@ -37,19 +37,14 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Desktop: grid layout */}
+        {/* Desktop: 3x2 grid layout */}
         <div className="hidden gap-3 md:grid md:grid-cols-3">
           {PHOTOS.map((photo, i) => (
-            <div
-              key={i}
-              className={`overflow-hidden rounded-xl ${
-                i === 0 ? "row-span-2" : ""
-              }`}
-            >
+            <div key={i} className="overflow-hidden rounded-xl">
               <img
                 src={photo.src}
                 alt={photo.alt}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                className="aspect-4/3 w-full object-cover transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
