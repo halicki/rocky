@@ -3,18 +3,14 @@ import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-end justify-center px-6 pb-24 pt-24 text-left md:items-center md:pb-0 md:text-center">
-      {/* Background: static image on mobile, video on desktop */}
-      <div
-        className="absolute inset-0 bg-cover bg-center md:hidden"
-        style={{ backgroundImage: "url('/images/photo2.jpg')" }}
-      />
+      {/* Background video */}
       <video
         autoPlay
         loop
         muted
         playsInline
         poster="/images/photo2.jpg"
-        className="absolute inset-0 hidden h-full w-full object-cover md:block"
+        className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
         <source src="/videos/hero.webm" type="video/webm" />
