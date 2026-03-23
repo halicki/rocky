@@ -2,15 +2,19 @@ import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-end justify-center px-6 pb-16 pt-24 text-left md:items-center md:pb-0 md:text-center">
-      {/* Background video */}
+    <section className="relative flex min-h-screen items-end justify-center px-6 pb-24 pt-24 text-left md:items-center md:pb-0 md:text-center">
+      {/* Background: static image on mobile, video on desktop */}
+      <div
+        className="absolute inset-0 bg-cover bg-center md:hidden"
+        style={{ backgroundImage: "url('/images/photo2.jpg')" }}
+      />
       <video
         autoPlay
         loop
         muted
         playsInline
         poster="/images/photo2.jpg"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
         <source src="/videos/hero.webm" type="video/webm" />
@@ -36,12 +40,18 @@ export default function Hero() {
         </h1>
 
         <p className="mt-5 text-base text-text-secondary md:text-lg">
-          Hey, I&apos;m Rocky. I grew up in Bali and have been surfing the waves
-          here for more than 20 years. I also worked many years as a
-          professional lifeguard, so safety in the ocean is always my highest
-          priority. Together with my team of local Balinese surf instructors we
-          help people from all over the world learn surfing safely and have fun
-          in the waves of Batu Bolong.
+          <span className="md:hidden">
+            Safe, fun surf lessons at Batu Bolong Beach with 20+ years
+            experience. All levels welcome.
+          </span>
+          <span className="hidden md:inline">
+            Hey, I&apos;m Rocky. I grew up in Bali and have been surfing the
+            waves here for more than 20 years. I also worked many years as a
+            professional lifeguard, so safety in the ocean is always my highest
+            priority. Together with my team of local Balinese surf instructors
+            we help people from all over the world learn surfing safely and have
+            fun in the waves of Batu Bolong.
+          </span>
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3 md:justify-center">
