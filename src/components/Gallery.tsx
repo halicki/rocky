@@ -2,10 +2,11 @@ import { GOOGLE_MAPS_URL } from "@/lib/constants";
 
 const PHOTOS = [
   { src: "/images/photo1.jpg", alt: "Surf lesson at Batu Bolong Beach Canggu Bali" },
-  { src: "/images/photo2.jpg", alt: "Beginner surfer catching a wave in Canggu Bali" },
+  { src: "/images/photo2.jpg", alt: "Rocky teaching surf stance on Batu Bolong Beach Canggu" },
   { src: "/images/photo3.jpg", alt: "Rocky surf instructor coaching student at Batu Bolong" },
   { src: "/images/photo4.jpg", alt: "Surfing With Rocky group lesson Canggu Bali" },
   { src: "/images/photo5.jpg", alt: "Sunset surf session at Batu Bolong Beach Bali" },
+  { src: "/images/photo6.jpg", alt: "Surfing With Rocky team and kids at Batu Bolong Beach" },
 ];
 
 export default function Gallery() {

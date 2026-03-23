@@ -8,7 +8,7 @@ export default function About() {
             <img
               src="/images/profile.jpg"
               alt="Rocky - Surf Instructor in Canggu, Bali"
-              className="aspect-4/3 w-full object-cover"
+              className="aspect-square w-full object-cover object-top"
             />
           </div>
 

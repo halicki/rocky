@@ -33,7 +33,7 @@ export default function Navbar() {
           href="#"
           className="font-heading text-lg font-bold tracking-wider text-white uppercase"
         >
-          Rocky Surf
+          Surfing With Rocky
         </a>
 
         {/* Desktop nav */}
