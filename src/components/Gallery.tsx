@@ -1,6 +1,3 @@
-"use client";
-
-import { useRef, useState, useEffect } from "react";
 import { GOOGLE_MAPS_URL } from "@/lib/constants";
 
 const PHOTOS = [
@@ -13,22 +10,8 @@ const PHOTOS = [
 ];
 
 export default function Gallery() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const index = Math.round(el.scrollLeft / (el.scrollWidth / PHOTOS.length));
-      setActiveIndex(index);
-    };
-    el.addEventListener("scroll", onScroll, { passive: true });
-    return () => el.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <section id="gallery" className="bg-bg-dark px-6 py-10 md:py-20">
+    <section id="gallery" className="hidden bg-bg-dark px-6 py-10 md:block md:py-20">
       <div className="mx-auto max-w-4xl text-center">
         <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
           Gallery
@@ -37,39 +20,8 @@ export default function Gallery() {
           Life on the Waves
         </h2>
 
-        {/* Mobile: horizontal scroll carousel */}
-        <div
-          ref={scrollRef}
-          className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:hidden"
-        >
-          {PHOTOS.map((photo, i) => (
-            <div
-              key={i}
-              className="min-w-[90vw] shrink-0 snap-center overflow-hidden rounded-xl"
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                className="aspect-4/3 w-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Dots indicator (mobile only) */}
-        <div className="mt-3 flex justify-center gap-2 md:hidden">
-          {PHOTOS.map((_, i) => (
-            <span
-              key={i}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === activeIndex ? "w-6 bg-accent-blue" : "w-1.5 bg-white/30"
-              }`}
-            />
-          ))}
-        </div>
-
         {/* Desktop: 3x2 grid layout */}
-        <div className="hidden gap-3 md:grid md:grid-cols-3">
+        <div className="grid grid-cols-3 gap-3">
           {PHOTOS.map((photo, i) => (
             <div key={i} className="overflow-hidden rounded-xl">
               <img

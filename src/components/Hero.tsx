@@ -1,13 +1,40 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
+const HERO_IMAGES = [
+  "/images/photo2.jpg",
+  "/images/photo1.jpg",
+  "/images/photo6.jpg",
+  "/images/photo3.jpg",
+  "/images/photo5.jpg",
+  "/images/photo4.jpg",
+];
+
 export default function Hero() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative flex min-h-screen items-end justify-center px-6 pb-24 pt-24 text-left md:items-center md:pb-0 md:text-center">
-      {/* Mobile: static image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center md:hidden"
-        style={{ backgroundImage: "url('/images/photo2.jpg')" }}
-      />
+      {/* Mobile: rotating background images */}
+      {HERO_IMAGES.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 md:hidden"
+          style={{
+            backgroundImage: `url('${src}')`,
+            opacity: i === currentImage ? 1 : 0,
+          }}
+        />
+      ))}
       {/* Desktop: video */}
       <video
         autoPlay
