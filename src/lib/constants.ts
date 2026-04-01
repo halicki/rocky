@@ -1,6 +1,14 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://surfingwithrocky.com";
 
 export const WHATSAPP_NUMBER = "6281999571854";
+
+/** Sections on the homepage that both navbars link to. */
+export const HOME_SECTIONS = [
+  { label: "About", section: "about" },
+  { label: "Lessons", section: "lessons" },
+  { label: "Reviews", section: "reviews" },
+  { label: "Gallery", section: "gallery" },
+] as const;
 export const WHATSAPP_MESSAGE = "Hi Rocky! I would love to book a surf lesson in Batu Bolong. When are you available?";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
