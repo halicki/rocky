@@ -41,5 +41,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: new URL("/blog", SITE_URL).toString(),
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: new URL("/blog/is-batu-bolong-good-for-beginners", SITE_URL).toString(),
+      lastModified: new Date("2025-01-20"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: new URL("/blog/what-to-expect-first-surf-lesson-bali", SITE_URL).toString(),
+      lastModified: new Date("2025-01-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: new URL("/blog/best-time-to-surf-canggu", SITE_URL).toString(),
+      lastModified: new Date("2025-01-10"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
