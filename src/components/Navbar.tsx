@@ -80,18 +80,23 @@ export default function Navbar() {
             className="flex flex-col gap-1.5"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            aria-controls="main-mobile-menu"
           >
             <span
+              aria-hidden="true"
               className={`block h-0.5 w-6 bg-white transition-transform ${
                 menuOpen ? "translate-y-2 rotate-45" : ""
               }`}
             />
             <span
+              aria-hidden="true"
               className={`block h-0.5 w-6 bg-white transition-opacity ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
             <span
+              aria-hidden="true"
               className={`block h-0.5 w-6 bg-white transition-transform ${
                 menuOpen ? "-translate-y-2 -rotate-45" : ""
               }`}
@@ -102,7 +107,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="bg-bg-dark/95 backdrop-blur-sm px-6 pb-6 md:hidden">
+        <div id="main-mobile-menu" className="bg-bg-dark/95 backdrop-blur-sm px-6 pb-6 md:hidden">
           {NAV_LINKS.map((link) =>
             link.href.startsWith("#") ? (
               <a

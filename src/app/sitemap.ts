@@ -1,9 +1,16 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
+import { blogPosts } from "@/lib/blog";
 
 export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
+  const newestPostDate = new Date(
+    blogPosts.reduce((latest, post) =>
+      post.date > latest.date ? post : latest
+    ).date
+  );
+
   return [
     {
       url: new URL("/", SITE_URL).toString(),
@@ -43,27 +50,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: new URL("/blog", SITE_URL).toString(),
-      lastModified,
+      lastModified: newestPostDate,
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    {
-      url: new URL("/blog/is-batu-bolong-good-for-beginners", SITE_URL).toString(),
-      lastModified: new Date("2025-01-20"),
-      changeFrequency: "monthly",
+    ...blogPosts.map((post) => ({
+      url: new URL(`/blog/${post.slug}`, SITE_URL).toString(),
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
       priority: 0.7,
-    },
-    {
-      url: new URL("/blog/what-to-expect-first-surf-lesson-bali", SITE_URL).toString(),
-      lastModified: new Date("2025-01-15"),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: new URL("/blog/best-time-to-surf-canggu", SITE_URL).toString(),
-      lastModified: new Date("2025-01-10"),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+    })),
   ];
 }
