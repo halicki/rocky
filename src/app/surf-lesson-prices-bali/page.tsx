@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
@@ -6,7 +7,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Surf Lesson Prices in Bali 2026 | Surfing With Rocky",
+  title: "Surf Lesson Prices in Bali | Surfing With Rocky",
   description:
     "How much do surf lessons cost in Bali? Rocky's transparent pricing: single session 400K IDR, three sessions 1.05M, couples 750K. Everything included. No hidden costs.",
   keywords: [
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://surfingwithrocky.com/surf-lesson-prices-bali",
   },
   openGraph: {
-    title: "Surf Lesson Prices in Bali 2026 | Surfing With Rocky",
+    title: "Surf Lesson Prices in Bali | Surfing With Rocky",
     description:
       "How much do surf lessons cost in Bali? Rocky's transparent pricing: single 400K IDR, three sessions 1.05M, couples 750K. Everything included.",
     type: "website",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Surf Lesson Prices in Bali 2026 | Surfing With Rocky",
+    title: "Surf Lesson Prices in Bali | Surfing With Rocky",
     description:
       "Rocky's transparent pricing: single 400K IDR, three sessions 1.05M, couples 750K. Everything included, no hidden costs.",
   },
@@ -147,62 +148,63 @@ const VALUE_POINTS = [
   },
 ];
 
-export default function SurfLessonPricesBali() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Surf Lessons Bali — Pricing",
-    description:
-      "Transparent surf lesson pricing at Batu Bolong Beach, Canggu. Single sessions from 400K IDR. All equipment included.",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Surfing With Rocky",
-      url: "https://surfingwithrocky.com",
-      telephone: "+6281999571854",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Batu Bolong Beach",
-        addressLocality: "Canggu",
-        addressRegion: "Bali",
-        addressCountry: "ID",
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Surf Lessons Bali — Pricing",
+  description:
+    "Transparent surf lesson pricing at Batu Bolong Beach, Canggu. Single sessions from 400K IDR. All equipment included.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Surfing With Rocky",
+    url: "https://surfingwithrocky.com",
+    telephone: "+6281999571854",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Batu Bolong Beach",
+      addressLocality: "Canggu",
+      addressRegion: "Bali",
+      addressCountry: "ID",
+    },
+  },
+  serviceType: "Surf Instruction",
+  areaServed: "Bali, Indonesia",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Surf Lesson Packages",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Single Session",
+        price: "400000",
+        priceCurrency: "IDR",
+        description: "~90-minute private surf lesson, board and rashguard included",
       },
-    },
-    serviceType: "Surf Instruction",
-    areaServed: "Bali, Indonesia",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Surf Lesson Packages",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          name: "Single Session",
-          price: "400000",
-          priceCurrency: "IDR",
-          description: "~90-minute private surf lesson, board and rashguard included",
-        },
-        {
-          "@type": "Offer",
-          name: "Three Sessions",
-          price: "1050000",
-          priceCurrency: "IDR",
-          description: "Three ~90-minute surf lessons, saves 150K IDR vs single rate",
-        },
-        {
-          "@type": "Offer",
-          name: "Couples / Friends",
-          price: "750000",
-          priceCurrency: "IDR",
-          description: "Surf lesson for 2 people together, both boards and rashguards included",
-        },
-      ],
-    },
-  };
+      {
+        "@type": "Offer",
+        name: "Three Sessions",
+        price: "1050000",
+        priceCurrency: "IDR",
+        description: "Three ~90-minute surf lessons, saves 150K IDR vs single rate",
+      },
+      {
+        "@type": "Offer",
+        name: "Couples / Friends",
+        price: "750000",
+        priceCurrency: "IDR",
+        description: "Surf lesson for 2 people together, both boards and rashguards included",
+      },
+    ],
+  },
+};
+
+export default function SurfLessonPricesBali() {
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
       />
       <LandingNavbar />
 
@@ -428,13 +430,13 @@ export default function SurfLessonPricesBali() {
                 { href: "/batu-bolong-surf", label: "About Batu Bolong Beach" },
                 { href: "/private-surf-lesson-bali", label: "Private Surf Lessons" },
               ].map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="rounded-lg border border-border-subtle bg-bg-card px-4 py-3 text-center text-sm font-medium text-text-secondary transition-colors hover:border-accent-blue/40 hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

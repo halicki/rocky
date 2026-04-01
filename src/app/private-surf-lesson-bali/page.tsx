@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
@@ -99,50 +100,51 @@ const PACKAGES = [
   },
 ];
 
-export default function PrivateSurfLessonBali() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Private Surf Lessons in Bali",
-    description:
-      "One-on-one private surf lessons at Batu Bolong Beach, Canggu. Personalised coaching with Rocky — ex-lifeguard, 20+ years experience. Daily 6AM–6PM.",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Surfing With Rocky",
-      url: "https://surfingwithrocky.com",
-      telephone: "+6281999571854",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Batu Bolong Beach",
-        addressLocality: "Canggu",
-        addressRegion: "Bali",
-        addressCountry: "ID",
-      },
-      openingHours: "Mo-Su 06:00-18:00",
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Private Surf Lessons in Bali",
+  description:
+    "One-on-one private surf lessons at Batu Bolong Beach, Canggu. Personalised coaching with Rocky — ex-lifeguard, 20+ years experience. Daily 6AM–6PM.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Surfing With Rocky",
+    url: "https://surfingwithrocky.com",
+    telephone: "+6281999571854",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Batu Bolong Beach",
+      addressLocality: "Canggu",
+      addressRegion: "Bali",
+      addressCountry: "ID",
     },
-    serviceType: "Private Surf Instruction",
-    areaServed: "Bali, Indonesia",
-    offers: [
-      {
-        "@type": "Offer",
-        name: "Single Private Session",
-        price: "400000",
-        priceCurrency: "IDR",
-      },
-      {
-        "@type": "Offer",
-        name: "Three Private Sessions",
-        price: "1050000",
-        priceCurrency: "IDR",
-      },
-    ],
-  };
+    openingHours: "Mo-Su 06:00-18:00",
+  },
+  serviceType: "Private Surf Instruction",
+  areaServed: "Bali, Indonesia",
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Single Private Session",
+      price: "400000",
+      priceCurrency: "IDR",
+    },
+    {
+      "@type": "Offer",
+      name: "Three Private Sessions",
+      price: "1050000",
+      priceCurrency: "IDR",
+    },
+  ],
+};
+
+export default function PrivateSurfLessonBali() {
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
       />
       <LandingNavbar />
 
@@ -366,9 +368,9 @@ export default function PrivateSurfLessonBali() {
             </div>
             <p className="mt-6 text-sm text-text-secondary">
               Also available:{" "}
-              <a href="/surf-lesson-prices-bali" className="text-accent-blue hover:underline">
+              <Link href="/surf-lesson-prices-bali" className="text-accent-blue hover:underline">
                 Couples lessons (750K IDR) and group rates
-              </a>
+              </Link>
             </p>
           </div>
         </section>
@@ -407,13 +409,13 @@ export default function PrivateSurfLessonBali() {
                 { href: "/batu-bolong-surf", label: "About Batu Bolong Beach" },
                 { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
               ].map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="rounded-lg border border-border-subtle bg-bg-card px-4 py-3 text-center text-sm font-medium text-text-secondary transition-colors hover:border-accent-blue/40 hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

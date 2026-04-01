@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
@@ -113,34 +114,35 @@ const ROCKY_TIPS = [
   },
 ];
 
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  name: "Batu Bolong Beach",
+  description:
+    "A popular beach break in Canggu, Bali, known for its consistent mellow waves and sandy bottom. One of the best beginner surf spots on the island.",
+  url: "https://surfingwithrocky.com/batu-bolong-surf",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Batu Bolong Beach",
+    addressLocality: "Canggu",
+    addressRegion: "Bali",
+    addressCountry: "ID",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -8.6525,
+    longitude: 115.1302,
+  },
+  touristType: "Surfers, Beginners",
+};
+
 export default function BatuBolongSurf() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    name: "Batu Bolong Beach",
-    description:
-      "A popular beach break in Canggu, Bali, known for its consistent mellow waves and sandy bottom. One of the best beginner surf spots on the island.",
-    url: "https://surfingwithrocky.com/batu-bolong-surf",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Batu Bolong Beach",
-      addressLocality: "Canggu",
-      addressRegion: "Bali",
-      addressCountry: "ID",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -8.6538,
-      longitude: 115.1286,
-    },
-    touristType: "Surfers, Beginners",
-  };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
       />
       <LandingNavbar />
 
@@ -355,13 +357,13 @@ export default function BatuBolongSurf() {
                 { href: "/private-surf-lesson-bali", label: "Private Surf Lessons" },
                 { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
               ].map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="rounded-lg border border-border-subtle bg-bg-card px-4 py-3 text-center text-sm font-medium text-text-secondary transition-colors hover:border-accent-blue/40 hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

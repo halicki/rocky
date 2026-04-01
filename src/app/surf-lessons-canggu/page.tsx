@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
@@ -97,60 +98,61 @@ const INCLUDED = [
   "Photo / video (on request)",
 ];
 
-export default function SurfLessonsCanggu() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Surf Lessons in Canggu, Bali",
-    description:
-      "Professional surf lessons for beginners at Batu Bolong Beach, Canggu with Rocky — ex-lifeguard with 20+ years of surfing experience.",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Surfing With Rocky",
-      url: "https://surfingwithrocky.com",
-      telephone: "+6281999571854",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Batu Bolong Beach",
-        addressLocality: "Canggu",
-        addressRegion: "Bali",
-        addressCountry: "ID",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: -8.6538,
-        longitude: 115.1286,
-      },
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Surf Lessons in Canggu, Bali",
+  description:
+    "Professional surf lessons for beginners at Batu Bolong Beach, Canggu with Rocky — ex-lifeguard with 20+ years of surfing experience.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Surfing With Rocky",
+    url: "https://surfingwithrocky.com",
+    telephone: "+6281999571854",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Batu Bolong Beach",
+      addressLocality: "Canggu",
+      addressRegion: "Bali",
+      addressCountry: "ID",
     },
-    serviceType: "Surf Instruction",
-    areaServed: "Canggu, Bali",
-    offers: [
-      {
-        "@type": "Offer",
-        name: "Single Session",
-        price: "400000",
-        priceCurrency: "IDR",
-      },
-      {
-        "@type": "Offer",
-        name: "Three Sessions",
-        price: "1050000",
-        priceCurrency: "IDR",
-      },
-      {
-        "@type": "Offer",
-        name: "Couples / Friends",
-        price: "750000",
-        priceCurrency: "IDR",
-      },
-    ],
-  };
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -8.6525,
+      longitude: 115.1302,
+    },
+  },
+  serviceType: "Surf Instruction",
+  areaServed: "Canggu, Bali",
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Single Session",
+      price: "400000",
+      priceCurrency: "IDR",
+    },
+    {
+      "@type": "Offer",
+      name: "Three Sessions",
+      price: "1050000",
+      priceCurrency: "IDR",
+    },
+    {
+      "@type": "Offer",
+      name: "Couples / Friends",
+      price: "750000",
+      priceCurrency: "IDR",
+    },
+  ],
+};
+
+export default function SurfLessonsCanggu() {
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
       />
       <LandingNavbar />
 
@@ -356,13 +358,13 @@ export default function SurfLessonsCanggu() {
                 { href: "/private-surf-lesson-bali", label: "Private Surf Lessons" },
                 { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
               ].map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="rounded-lg border border-border-subtle bg-bg-card px-4 py-3 text-center text-sm font-medium text-text-secondary transition-colors hover:border-accent-blue/40 hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

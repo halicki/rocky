@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
@@ -91,45 +92,46 @@ const CREDENTIALS = [
   { label: "All gear provided", icon: "🏄‍♂️" },
 ];
 
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Beginner Surf Lessons in Bali",
+  description:
+    "Safe, fun beginner surf lessons for complete first-timers at Batu Bolong Beach, Canggu. Rocky is a former lifeguard with 20+ years of surfing experience.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Surfing With Rocky",
+    url: "https://surfingwithrocky.com",
+    telephone: "+6281999571854",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Batu Bolong Beach",
+      addressLocality: "Canggu",
+      addressRegion: "Bali",
+      addressCountry: "ID",
+    },
+  },
+  serviceType: "Beginner Surf Instruction",
+  audience: {
+    "@type": "Audience",
+    audienceType: "Beginners, First-timers, Tourists",
+  },
+  areaServed: "Bali, Indonesia",
+  offers: {
+    "@type": "Offer",
+    name: "Single Beginner Session",
+    price: "400000",
+    priceCurrency: "IDR",
+  },
+};
+
 export default function BeginnerSurfLessonsBali() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Beginner Surf Lessons in Bali",
-    description:
-      "Safe, fun beginner surf lessons for complete first-timers at Batu Bolong Beach, Canggu. Rocky is a former lifeguard with 20+ years of surfing experience.",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Surfing With Rocky",
-      url: "https://surfingwithrocky.com",
-      telephone: "+6281999571854",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Batu Bolong Beach",
-        addressLocality: "Canggu",
-        addressRegion: "Bali",
-        addressCountry: "ID",
-      },
-    },
-    serviceType: "Beginner Surf Instruction",
-    audience: {
-      "@type": "Audience",
-      audienceType: "Beginners, First-timers, Tourists",
-    },
-    areaServed: "Bali, Indonesia",
-    offers: {
-      "@type": "Offer",
-      name: "Single Beginner Session",
-      price: "400000",
-      priceCurrency: "IDR",
-    },
-  };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
       />
       <LandingNavbar />
 
@@ -338,12 +340,12 @@ export default function BeginnerSurfLessonsBali() {
               All equipment included.
             </p>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <a
+              <Link
                 href="/surf-lesson-prices-bali"
                 className="rounded-lg border-2 border-accent-blue px-6 py-3 text-sm font-bold text-accent-blue transition-all duration-200 hover:bg-accent-blue/10"
               >
                 View All Prices →
-              </a>
+              </Link>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -369,13 +371,13 @@ export default function BeginnerSurfLessonsBali() {
                 { href: "/private-surf-lesson-bali", label: "Private Surf Lessons" },
                 { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
               ].map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="rounded-lg border border-border-subtle bg-bg-card px-4 py-3 text-center text-sm font-medium text-text-secondary transition-colors hover:border-accent-blue/40 hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

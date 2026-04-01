@@ -16,6 +16,7 @@ export default function LandingNavbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -68,9 +69,12 @@ export default function LandingNavbar() {
             Book Now
           </a>
           <button
+            type="button"
             className="flex flex-col gap-1.5"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             <span
               className={`block h-0.5 w-6 bg-white transition-transform ${
@@ -93,7 +97,7 @@ export default function LandingNavbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="bg-bg-dark/95 backdrop-blur-sm px-6 pb-6 md:hidden">
+        <div id="mobile-menu" className="bg-bg-dark/95 backdrop-blur-sm px-6 pb-6 md:hidden">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
