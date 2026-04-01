@@ -7,14 +7,15 @@ interface ExploreLink {
 
 interface ExploreMoreLinksProps {
   links: ExploreLink[];
+  title?: string;
 }
 
-export default function ExploreMoreLinks({ links }: ExploreMoreLinksProps) {
+export default function ExploreMoreLinks({ links, title = "Explore More" }: ExploreMoreLinksProps) {
   return (
     <section className="bg-bg-dark px-6 pb-16">
       <div className="mx-auto max-w-5xl">
         <p className="mb-6 text-center text-xs font-semibold tracking-[0.15em] uppercase text-text-secondary/50">
-          Explore More
+          {title}
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {links.map((link) => (

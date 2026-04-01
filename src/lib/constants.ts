@@ -9,6 +9,8 @@ export const HOME_SECTIONS = [
   { label: "Reviews", section: "reviews" },
   { label: "Gallery", section: "gallery" },
 ] as const;
+
+export type HomeSection = (typeof HOME_SECTIONS)[number];
 export const WHATSAPP_MESSAGE = "Hi Rocky! I would love to book a surf lesson in Batu Bolong. When are you available?";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
