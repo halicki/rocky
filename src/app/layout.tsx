@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import StructuredData from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -17,6 +18,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Surfing With Rocky | Surf Lessons Batu Bolong Canggu Bali",
   description:
     "Learn to surf in Batu Bolong, Canggu with Rocky and his local surf team. Beginner friendly surf lessons in Bali with a professional lifeguard instructor.",
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     "surf lessons Batu Bolong Beach",
   ],
   alternates: {
-    canonical: "https://surfingwithrocky.com",
+    canonical: SITE_URL,
   },
   openGraph: {
     title: "Surfing With Rocky | Surf Lessons Batu Bolong Canggu Bali",
@@ -39,11 +41,11 @@ export const metadata: Metadata = {
       "Learn to surf in Batu Bolong, Canggu with Rocky and his local surf team. Beginner friendly surf lessons in Bali with a professional lifeguard instructor.",
     type: "website",
     locale: "en_US",
-    url: "https://surfingwithrocky.com",
+    url: SITE_URL,
     siteName: "Surfing With Rocky",
     images: [
       {
-        url: "https://surfingwithrocky.com/images/photo1.jpg",
+        url: "/images/photo1.jpg",
         width: 1200,
         height: 800,
         alt: "Surf lesson at Batu Bolong Beach, Canggu, Bali with Rocky",
@@ -55,7 +57,7 @@ export const metadata: Metadata = {
     title: "Surfing With Rocky | Surf Lessons Batu Bolong Canggu Bali",
     description:
       "Learn to surf in Batu Bolong, Canggu with Rocky and his local surf team. Beginner friendly surf lessons in Bali.",
-    images: ["https://surfingwithrocky.com/images/photo1.jpg"],
+    images: ["/images/photo1.jpg"],
   },
 };
 
