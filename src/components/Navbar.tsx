@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, HOME_SECTIONS } from "@/lib/constants";
 
-const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Lessons", href: "#lessons" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Gallery", href: "#gallery" },
-];
+const NAV_LINKS = HOME_SECTIONS.map(({ label, section }) => ({
+  label,
+  href: `#${section}`,
+}));
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

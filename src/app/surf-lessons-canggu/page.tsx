@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ExploreMoreLinks from "@/components/landing/ExploreMoreLinks";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -345,30 +345,14 @@ export default function SurfLessonsCanggu() {
           </div>
         </section>
 
-        {/* Related pages */}
-        <section className="bg-bg-dark px-6 pb-16">
-          <div className="mx-auto max-w-5xl">
-            <p className="mb-6 text-center text-xs font-semibold tracking-[0.15em] uppercase text-text-secondary/50">
-              Explore More
-            </p>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                { href: "/beginner-surf-lessons-bali", label: "Beginner Surf Lessons Bali" },
-                { href: "/batu-bolong-surf", label: "About Batu Bolong Beach" },
-                { href: "/private-surf-lesson-bali", label: "Private Surf Lessons" },
-                { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="rounded-lg border border-border-subtle bg-bg-card px-4 py-3 text-center text-sm font-medium text-text-secondary transition-colors hover:border-accent-blue/40 hover:text-white"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ExploreMoreLinks
+          links={[
+            { href: "/beginner-surf-lessons-bali", label: "Beginner Surf Lessons Bali" },
+            { href: "/batu-bolong-surf", label: "About Batu Bolong Beach" },
+            { href: "/private-surf-lesson-bali", label: "Private Surf Lessons" },
+            { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
+          ]}
+        />
       </main>
 
       <FinalCTA />
