@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export const metadata = {
   title: "Best Time to Surf in Canggu — Month by Month Guide",
@@ -14,15 +15,11 @@ export const metadata = {
   },
 };
 
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Best Time to Surf in Canggu — Month by Month Guide",
-  "datePublished": "2025-01-10",
-  "author": { "@type": "Person", "name": "Rocky" },
-  "publisher": { "@type": "Organization", "name": "Surfing With Rocky", "url": "https://surfingwithrocky.com" },
-  "url": "https://surfingwithrocky.com/blog/best-time-to-surf-canggu"
-}) }} />
+<ArticleSchema
+  headline="Best Time to Surf in Canggu — Month by Month Guide"
+  datePublished="2025-01-10"
+  url="https://surfingwithrocky.com/blog/best-time-to-surf-canggu"
+/>
 
 <article className="min-h-screen bg-bg-dark pt-24 pb-16">
 <div className="mx-auto max-w-3xl px-6">

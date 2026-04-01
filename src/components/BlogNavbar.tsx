@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { useScrolled } from "@/hooks/useScrolled";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -10,14 +11,8 @@ const NAV_LINKS = [
 ];
 
 export default function BlogNavbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const scrolled = useScrolled(50);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <nav
