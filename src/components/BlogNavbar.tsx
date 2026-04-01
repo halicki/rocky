@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { WHATSAPP_URL, HOME_SECTIONS } from "@/lib/constants";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { useScrolled } from "@/hooks/useScrolled";
 
 const NAV_LINKS = [
-  ...HOME_SECTIONS.map(({ label, section }) => ({ label, href: `#${section}` })),
+  { label: "Home", href: "/" },
   { label: "Blog", href: "/blog" },
 ];
 
-export default function Navbar() {
+export default function BlogNavbar() {
   const scrolled = useScrolled(50);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -23,34 +23,32 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="font-heading text-lg font-bold tracking-wider text-white uppercase"
         >
           Surfing With Rocky
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) =>
-            link.href.startsWith("#") ? (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-text-secondary transition-colors hover:text-white"
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm text-text-secondary transition-colors hover:text-white"
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm text-text-secondary transition-colors hover:text-white"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-text-secondary transition-colors hover:text-white"
+          >
+            Book a Lesson
+          </a>
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -76,7 +74,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
-            aria-controls="main-mobile-menu"
+            aria-controls="blog-mobile-menu"
           >
             <span
               aria-hidden="true"
@@ -102,28 +100,26 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div id="main-mobile-menu" className="bg-bg-dark/95 backdrop-blur-sm px-6 pb-6 md:hidden">
-          {NAV_LINKS.map((link) =>
-            link.href.startsWith("#") ? (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block py-3 text-text-secondary transition-colors hover:text-white"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block py-3 text-text-secondary transition-colors hover:text-white"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+        <div id="blog-mobile-menu" className="bg-bg-dark/95 backdrop-blur-sm px-6 pb-6 md:hidden">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="block py-3 text-text-secondary transition-colors hover:text-white"
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block py-3 text-text-secondary transition-colors hover:text-white"
+            onClick={() => setMenuOpen(false)}
+          >
+            Book a Lesson
+          </a>
         </div>
       )}
     </nav>
