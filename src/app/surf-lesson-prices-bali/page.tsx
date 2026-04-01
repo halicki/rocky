@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import ExploreMoreLinks from "@/components/landing/ExploreMoreLinks";
 import Footer from "@/components/Footer";
