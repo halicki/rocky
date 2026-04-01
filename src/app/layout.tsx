@@ -43,21 +43,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Surfing With Rocky",
-    images: [
-      {
-        url: "/images/photo1.jpg",
-        width: 1200,
-        height: 800,
-        alt: "Surf lesson at Batu Bolong Beach, Canggu, Bali with Rocky",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Surfing With Rocky | Surf Lessons Batu Bolong Canggu Bali",
     description:
       "Learn to surf in Batu Bolong, Canggu with Rocky and his local surf team. Beginner friendly surf lessons in Bali.",
-    images: ["/images/photo1.jpg"],
   },
 };
 
