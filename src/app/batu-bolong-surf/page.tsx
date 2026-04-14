@@ -7,11 +7,15 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Surfing Batu Bolong Beach Canggu | Surfing With Rocky",
+  title: "Batu Bolong Surf Report & Beginner Guide | Canggu, Bali",
   description:
-    "Everything you need to know about surfing Batu Bolong Beach in Canggu, Bali. Wave conditions, best times, tide info, and why it's perfect for beginners. Book a lesson with Rocky.",
+    "Live Batu Bolong surf conditions, daily swell report, wave height, tides and best times to paddle out. A local's guide to Pantai Batu Bolong beach in Canggu — the easiest beginner wave in Bali.",
   keywords: [
     "Batu Bolong surf",
+    "Batu Bolong surf report",
+    "pantai batu bolong",
+    "Batu Bolong Beach Canggu",
+    "magicseaweed Batu Bolong",
     "Batu Bolong Beach surfing",
     "surfing Canggu beach",
     "Batu Bolong waves",
@@ -95,6 +99,52 @@ const SEASONS = [
   },
 ];
 
+const BATU_BOLONG_FAQS = [
+  {
+    question: "Where can I check a live Batu Bolong surf report?",
+    answer:
+      "Surfline, Magicseaweed and Windy all publish daily Batu Bolong forecasts — swell height, period, wind direction and tide. Rocky personally checks conditions every morning at sunrise and sends a short WhatsApp update with wave size, crowd and whether it is a good day for a lesson. Message him the night before if you want tomorrow's call.",
+  },
+  {
+    question: "Is Pantai Batu Bolong good for first-time surfers?",
+    answer:
+      "Yes — Pantai Batu Bolong (Batu Bolong Beach) is widely considered the most beginner-friendly surf break in Canggu. The sandy bottom, slow rolling waves and short paddle out make it genuinely safe for people who have never stood on a board. On an average day the white-water inside section is full of beginners having their first stand-up.",
+  },
+  {
+    question: "What is the best time of day to surf Batu Bolong Beach Canggu?",
+    answer:
+      "Early morning, 6AM to 9AM. The southeast trade winds are offshore, the water is glassy and the crowd is thin. After 10AM the onshore sea breeze picks up and the surface gets choppy. Rocky's first lesson of the day leaves the beach at 6AM for exactly this reason.",
+  },
+  {
+    question: "How crowded does Batu Bolong get?",
+    answer:
+      "Batu Bolong is Canggu's most popular break, so during high season (July–September) the lineup can get busy, especially from 8AM onward. The good news: beginners stay on the inside whitewater section which has plenty of space, and Rocky picks the quietest peak for his lessons. Off-peak months and early mornings are almost empty.",
+  },
+  {
+    question: "What tide is best for surfing Batu Bolong?",
+    answer:
+      "Mid-tide pushing in is the sweet spot — the sandbanks at Batu Bolong produce the cleanest, longest waves when there is around 1.2–1.6m of water over them. Low tide can get shallow and punchy on the inside; very high tide makes some peaks fat and mushy. Rocky plans every lesson around the daily tide chart.",
+  },
+  {
+    question: "Do I need to bring my own board to Batu Bolong?",
+    answer:
+      "No. Board rental shacks line the beach road and Rocky provides a high-quality foam board included in every lesson. Foam longboards (7'–9') are the right choice at Batu Bolong — they catch the rolling waves easily and are forgiving on wipeouts. Bring swimwear, reef-safe sunscreen and water. That is it.",
+  },
+];
+
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: BATU_BOLONG_FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 const ROCKY_TIPS = [
   {
     tip: "Arrive before 8AM",
@@ -143,6 +193,10 @@ export default function BatuBolongSurf() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
       <LandingNavbar />
 
@@ -290,6 +344,85 @@ export default function BatuBolongSurf() {
             <p className="mt-6 text-center text-sm text-text-secondary">
               Good news: Batu Bolong has waves year-round. Rocky runs lessons 365 days a year, 6AM – 6PM.
             </p>
+          </div>
+        </section>
+
+        {/* Surf Report & Live Conditions */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-12 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                Daily Check
+              </p>
+              <h2 className="font-heading text-3xl font-bold md:text-4xl">
+                Batu Bolong Surf Report & Live Conditions
+              </h2>
+              <p className="mt-4 text-text-secondary">
+                How to read the forecast — and how Rocky reads it for you.
+              </p>
+            </div>
+            <div className="prose-custom mx-auto max-w-3xl space-y-5 text-text-secondary">
+              <p className="text-base leading-relaxed">
+                Batu Bolong Beach sits on the southwest coast of Canggu, exposed directly to swells
+                rolling in from the Indian Ocean. Most days of the year it gets waves — the question
+                is how big, how clean, and at what tide. You can pull a Batu Bolong surf report from{" "}
+                <strong>Surfline</strong>, <strong>Magicseaweed</strong> or <strong>Windy</strong>,
+                but raw forecast numbers rarely tell the whole story for beginners.
+              </p>
+              <p className="text-base leading-relaxed">
+                Rocky walks down to the break every morning at sunrise and looks at three things:{" "}
+                <em>wave height</em> (knee to shoulder is the beginner sweet spot),{" "}
+                <em>wind direction</em> (offshore SE is prime) and{" "}
+                <em>tide movement</em> (mid-tide pushing in is the best beginner window at Batu
+                Bolong). He then picks the peak of the day — not the biggest wave, the friendliest
+                one.
+              </p>
+              <p className="text-base leading-relaxed">
+                <strong>Want a same-day surf check?</strong> Message Rocky on WhatsApp the night
+                before or at dawn. He will reply with the current wave size at Batu Bolong Beach
+                Canggu, the crowd level, and an honest call on whether it is a good day for your
+                level. No booking pressure — just a local giving you the real conditions.
+              </p>
+            </div>
+            <div className="mt-8 flex justify-center">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border-2 border-accent-blue bg-bg-card px-8 py-4 text-base font-bold text-white transition-all duration-200 hover:border-accent-coral"
+              >
+                💬 Ask Rocky for Today&apos;s Surf Report
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Batu Bolong FAQ */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                FAQ
+              </p>
+              <h2 className="font-heading text-3xl font-bold md:text-4xl">
+                Batu Bolong Surf Questions
+              </h2>
+            </div>
+            <dl className="space-y-4">
+              {BATU_BOLONG_FAQS.map((faq) => (
+                <div
+                  key={faq.question}
+                  className="rounded-xl border border-border-subtle bg-bg-card p-6"
+                >
+                  <dt className="mb-2 font-heading text-lg font-semibold">
+                    {faq.question}
+                  </dt>
+                  <dd className="text-sm leading-relaxed text-text-secondary">
+                    {faq.answer}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
