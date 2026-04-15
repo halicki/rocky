@@ -19,15 +19,34 @@ Read these three files in parallel — they are the loop's memory:
 
 ## Step 1 — GSC Snapshot
 
-Use the Chrome MCP (`mcp__Claude_in_Chrome__*` tools). Load the tools via ToolSearch first if deferred: `{ query: "+chrome", max_results: 10 }`.
+Run the GSC API script:
 
-1. Call `tabs_context_mcp` with `createIfEmpty: true`
+```bash
+cd /Users/arek/code/rocky && node --env-file=.env.local scripts/gsc-snapshot.mjs
+```
+
+Parse the JSON output:
+- `window.start` / `window.end` — actual data window
+- `totals` — `{ clicks, impressions, ctr, position }`
+- `queries[]` — top 25 queries with clicks, impressions, ctr, position
+- `pages[]` — top 25 pages with clicks, impressions, ctr, position
+
+**Failure handling:**
+
+| Exit / error | Action |
+|---|---|
+| `GSC_SERVICE_ACCOUNT_JSON is not set` | Fall back to Chrome MCP (see below). Log `GSC_API_MISSING_CREDS`. |
+| `403 Forbidden` | Service account not in GSC property. Log `GSC_API_403`. Fall back to Chrome MCP. |
+| Any other non-zero exit | Log `GSC_API_ERROR: <stderr>`. Fall back to Chrome MCP. |
+
+**Chrome MCP fallback** (use only if API script fails):
+
+Load tools via ToolSearch: `{ query: "+chrome", max_results: 10 }`.
+1. `tabs_context_mcp` with `createIfEmpty: true`
 2. Navigate to: `https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Asurfingwithrocky.com&hl=pl&num_of_days=28`
-3. Call `get_page_text` — parse out:
-   - Total clicks, impressions, CTR, avg position
-   - Top queries table (rows like `<query>\t<clicks>\t<impressions>\t<ctr>\t<position>`)
-4. Click the "Strony" (Pages) tab using `find` → `computer` with `action: left_click, ref: <ref_id>`. Wait 2s. Call `get_page_text` again → parse top pages.
-5. If the page text shows "Zaloguj się" / "Sign in" / empty data → **ABORT**. Write a one-line log entry: `SKIP: GSC not authenticated — user must re-login`. Do NOT commit. Stop here.
+3. `get_page_text` → parse totals + queries table
+4. Click "Strony" tab → wait 2s → `get_page_text` → parse pages table
+5. If page shows "Zaloguj się" / "Sign in" / empty data → **ABORT**. Write one-line log: `SKIP: GSC not authenticated — user must re-login`. No commit. Stop.
 
 ## Step 2 — Compare with yesterday
 
