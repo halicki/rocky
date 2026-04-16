@@ -10,6 +10,8 @@ Columns: date | action | target | commit | notes
 | 2026-04-14 Day 1 | Rule 4 — on-page enrich + FAQPage schema | /batu-bolong-surf/ | 120b66c | added surf-report section, 6-Q FAQ + FAQPage JSON-LD; targets batu-bolong cluster (pos 43–62) |
 | 2026-04-15 | Rule 2 — CTR rescue: title + AggregateRating | /surf-lesson-prices-bali/ | 4b019cf | new title adds 2026+price hook (52 chars); description trimmed to 149 chars; Service schema gains aggregateRating (5.0/82 reviews) → star rich-result |
 
+| 2026-04-16 | Rule 2 | /blog/best-time-to-surf-canggu | 3c56efa | CTR rescue: title gains "Bali" keyword (was "Canggu"), description trimmed 170→147 chars; targets "best time to surf bali" cluster |
+
 ## Trend observations
 
 - **Baseline (2026-04-14)**: site is early-stage. Only 12 days of GSC data. Single query in striking distance: `pantai batu bolong` (pos 3.0, 1 impr). All other queries position 40–90. No clicks from non-brand long-tail yet.
