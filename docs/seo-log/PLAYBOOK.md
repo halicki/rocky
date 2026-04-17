@@ -68,6 +68,18 @@ User wykonuje to ręcznie (~5 min dziennie). Ticket z GBP może towarzyszyć com
 
 ---
 
+## Przyszłe ulepszenia pętli (nie reguły — zadania jednorazowe)
+
+### GA4 API w pętli  📊
+**Kiedy**: ruch osiągnie ~50 sesji/tydzień (sprawdź w GA4 → Reports → Overview).
+**Co zrobić**: dodaj odczyt GA4 Data API do `scripts/gsc-snapshot.mjs` (lub osobny skrypt). Użyj tego samego service account co GSC — wystarczy dodać go jako użytkownika w GA4 Admin → Account Access. Interesujące metryki per strona:
+- `sessions`, `bounceRate`, `averageSessionDuration`
+- zdarzenia `click` z `outbound: true` (kliknięcia WhatsApp = konwersje)
+
+Po integracji pętla będzie mogła oceniać akcje nie tylko po pozycji/CTR, ale też po zaangażowaniu i konwersjach. Measurement ID: `G-0LTBL2X919`.
+
+---
+
 ## Zakaz-lista (agent NIGDY nie robi)
 
 - ❌ nie modyfikuje `package.json`, `next.config.ts`, `eslint.config.mjs`, `postcss.config.mjs`, `tsconfig.json`
