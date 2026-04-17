@@ -98,6 +98,47 @@ const INCLUDED = [
   "Photo / video (on request)",
 ];
 
+const FAQ_ITEMS = [
+  {
+    question: "How much do surf lessons in Canggu cost?",
+    answer:
+      "Surf lessons in Canggu with Rocky start from 400,000 IDR per person for a single 90-minute session. Three-session packages are 1,050,000 IDR, and couples/friends sessions are 750,000 IDR for two people. Board, rashguard, and safety briefing are all included.",
+  },
+  {
+    question: "Are surf lessons in Canggu suitable for complete beginners?",
+    answer:
+      "Yes — Canggu is one of the best places in Bali for beginner surf lessons. Batu Bolong Beach has consistent, mellow waves with a sandy bottom, making it ideal for first-timers. Rocky specialises in getting beginners standing on their board within the first lesson.",
+  },
+  {
+    question: "Where exactly do the surf lessons take place?",
+    answer:
+      "All lessons are held at Batu Bolong Beach in Canggu, Bali. It's located in the heart of Canggu, easily accessible by scooter from anywhere in the area including Echo Beach, Berawa, and Seminyak.",
+  },
+  {
+    question: "How long is a surf lesson in Canggu?",
+    answer:
+      "Each surf lesson is approximately 90 minutes in the water. This includes a beach warm-up and safety briefing before you paddle out, then your full session with 1-on-1 coaching and wave pushes.",
+  },
+  {
+    question: "Do I need to book surf lessons in Canggu in advance?",
+    answer:
+      "Booking in advance is recommended, especially during peak season (July–August). The easiest way to book is via WhatsApp — Rocky usually confirms within a few hours and can arrange a lesson for the next morning.",
+  },
+];
+
+const FAQ_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -153,6 +194,10 @@ export default function SurfLessonsCanggu() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
       />
       <LandingNavbar />
 
@@ -342,6 +387,32 @@ export default function SurfLessonsCanggu() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                FAQ
+              </p>
+              <h2 className="font-heading text-3xl font-bold md:text-4xl">
+                Surf Lessons Canggu — Common Questions
+              </h2>
+            </div>
+            <dl className="divide-y divide-border-subtle rounded-2xl border border-border-subtle bg-bg-card">
+              {FAQ_ITEMS.map((item) => (
+                <div key={item.question} className="px-6 py-5">
+                  <dt className="font-heading text-base font-semibold md:text-lg">
+                    {item.question}
+                  </dt>
+                  <dd className="mt-2 text-sm leading-relaxed text-text-secondary">
+                    {item.answer}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
