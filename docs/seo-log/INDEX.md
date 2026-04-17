@@ -12,6 +12,8 @@ Columns: date | action | target | commit | notes
 
 | 2026-04-16 | Rule 2 | /blog/best-time-to-surf-canggu | 3c56efa | CTR rescue: title gains "Bali" keyword (was "Canggu"), description trimmed 170→147 chars; targets "best time to surf bali" cluster |
 
+| 2026-04-17 | Rule 4 | /surf-lessons-canggu | 7ce3723 | FAQPage schema + FAQ section on pos-7 commercial page; GSC detailed endpoint DNS failure — totals only (97 impr, +6) |
+
 ## Trend observations
 
 - **Baseline (2026-04-14)**: site is early-stage. Only 12 days of GSC data. Single query in striking distance: `pantai batu bolong` (pos 3.0, 1 impr). All other queries position 40–90. No clicks from non-brand long-tail yet.
