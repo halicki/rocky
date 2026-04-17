@@ -34,7 +34,7 @@ Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i
 - alt text dla obrazków bez alt (sprawdź `public/` + komponenty `Gallery.tsx`, `Hero.tsx`)
 - `VideoObject` schema jeśli na stronie jest embedded wideo
 - dodanie internal linków w `ExploreMoreLinks` z lepszym anchor textem
-- **[JEDNORAZOWE] Google Analytics 4** — dodaj `<Script>` GA4 do `src/app/layout.tsx` (jeden raz, gdy żaden inny priorytet nie pasuje i ruch zaczyna rosnąć). GA4 automatycznie trackuje kliknięcia w linki zewnętrzne (WhatsApp CTA = outbound click = de facto conversion). Pozwoli mierzyć CTR per landing po tym jak ruch się pojawi. Implementacja: dodaj `gtag.js` przez `next/script` z `strategy="afterInteractive"`, measurement ID z `.env.local`. Po zrobieniu raz — usuń ten punkt z listy.
+- ~~**[JEDNORAZOWE] Google Analytics 4**~~ ✅ wdrożone 2026-04-17 (`G-0LTBL2X919` w `layout.tsx`). GA4 trackuje outbound kliknięcia (WhatsApp CTA) automatycznie jako zdarzenia `click`. Sprawdzaj dane w GA4 → Reports → Engagement → Events.
 
 ### 5. Blog Content Expansion  📝
 **Warunek**: powyższe nie pasują, brak ruchu ogólnie, potrzeba więcej contentu pod long-tail.
