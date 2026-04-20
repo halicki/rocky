@@ -18,6 +18,8 @@ Columns: date | action | target | commit | notes
 
 | 2026-04-20 | Rule 4 | /beginner-surf-lessons-bali | 6f4d602 | FAQPage JSON-LD on page with 3 existing FAQs; impr +2 to 129; all actions still in crawl delay |
 
+| 2026-04-21 | Rule 4 | /private-surf-lesson-bali | d924c92 | FAQ section + FAQPage JSON-LD on untouched pos-5.7 page; impr +5 to 134; all actions in crawl delay |
+
 ## Trend observations
 
 - **Baseline (2026-04-14)**: site is early-stage. Only 12 days of GSC data. Single query in striking distance: `pantai batu bolong` (pos 3.0, 1 impr). All other queries position 40–90. No clicks from non-brand long-tail yet.
