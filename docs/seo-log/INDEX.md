@@ -16,6 +16,8 @@ Columns: date | action | target | commit | notes
 
 | 2026-04-19 | Rule 4 | /blog/is-batu-bolong-good-for-beginners + /blog/what-to-expect-first-surf-lesson-bali | a42fd94 | BreadcrumbList JSON-LD on 2 untouched blog posts; impr +30 to 127; all prior actions still in crawl delay |
 
+| 2026-04-20 | Rule 4 | /beginner-surf-lessons-bali | 6f4d602 | FAQPage JSON-LD on page with 3 existing FAQs; impr +2 to 129; all actions still in crawl delay |
+
 ## Trend observations
 
 - **Baseline (2026-04-14)**: site is early-stage. Only 12 days of GSC data. Single query in striking distance: `pantai batu bolong` (pos 3.0, 1 impr). All other queries position 40–90. No clicks from non-brand long-tail yet.
