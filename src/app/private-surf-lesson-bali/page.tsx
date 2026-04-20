@@ -101,6 +101,39 @@ const PACKAGES = [
   },
 ];
 
+const FAQ_ITEMS = [
+  {
+    q: "What is the difference between a private and group surf lesson?",
+    a: "In a private lesson Rocky's full attention is on you — every wave, every correction, every breakthrough. Group lessons split the instructor's time across 4–8 students. Private students typically progress three times faster because mistakes are fixed immediately after each ride.",
+  },
+  {
+    q: "How long is a private surf lesson with Rocky?",
+    a: "Each private session is approximately 90 minutes in the water. Rocky includes a short warm-up on the beach before paddling out so you arrive in the water prepared and confident.",
+  },
+  {
+    q: "Do I need surfing experience to book a private lesson?",
+    a: "No experience is needed. Rocky teaches complete beginners as well as intermediate surfers looking to improve specific techniques. He selects the right board and waves for your exact level from day one.",
+  },
+  {
+    q: "How much does a private surf lesson cost in Bali?",
+    a: "A single private surf session with Rocky costs 400,000 IDR (approximately USD 25). A three-session pack costs 1,050,000 IDR — saving 150,000 IDR. Board, rashguard, and personalised coaching are all included.",
+  },
+  {
+    q: "Where do private surf lessons take place?",
+    a: "All lessons are held at Batu Bolong Beach in Canggu, Bali — one of the most beginner-friendly surf breaks on the island. Rocky teaches here daily from 6AM to 6PM.",
+  },
+];
+
+const FAQ_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+};
+
 const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -146,6 +179,10 @@ export default function PrivateSurfLessonBali() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
       />
       <LandingNavbar />
 
@@ -394,6 +431,31 @@ export default function PrivateSurfLessonBali() {
             >
               Read all 82 reviews on Google Maps →
             </a>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                FAQ
+              </p>
+              <h2 className="font-heading text-3xl font-bold md:text-4xl">
+                Private Surf Lesson Questions
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {FAQ_ITEMS.map(({ q, a }) => (
+                <div
+                  key={q}
+                  className="rounded-xl border border-border-subtle bg-bg-card p-6"
+                >
+                  <h3 className="mb-3 font-heading text-base font-semibold">{q}</h3>
+                  <p className="text-sm leading-relaxed text-text-secondary">{a}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
