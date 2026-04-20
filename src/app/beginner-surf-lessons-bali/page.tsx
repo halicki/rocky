@@ -93,6 +93,37 @@ const CREDENTIALS = [
   { label: "All gear provided", icon: "🏄‍♂️" },
 ];
 
+const FAQ_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do I need to know how to swim?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Basic swimming ability is recommended. You don't need to be a strong swimmer — we stay in shallow water — but being comfortable in the ocean makes the experience more enjoyable. Rocky is a former lifeguard and your safety is always the priority.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long until I can stand up on a wave?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most beginners stand up on their first day. The white-water waves at Batu Bolong are slow and forgiving, which means you get plenty of attempts. Rocky knows exactly which waves to push you into.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What should I bring to a beginner surf lesson in Bali?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Just yourself and sunscreen. Rocky provides the surfboard and rashguard. Wear or bring a swimsuit. A towel and water are handy for after.",
+      },
+    },
+  ],
+};
+
 const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -133,6 +164,10 @@ export default function BeginnerSurfLessonsBali() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
       />
       <LandingNavbar />
 
