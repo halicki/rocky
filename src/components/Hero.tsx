@@ -44,7 +44,6 @@ export default function Hero() {
         className="absolute inset-0 hidden h-full w-full object-cover md:block"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
-        <source src="/videos/hero.webm" type="video/webm" />
       </video>
       <div className="absolute inset-0 bg-linear-to-b from-bg-dark/40 via-bg-dark/30 to-bg-dark/80" />
 

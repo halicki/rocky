@@ -1,14 +1,19 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="about" className="bg-bg-light py-10 md:py-20">
       <div className="gradient-bar w-full" />
       <div className="mx-auto max-w-4xl px-6 pt-10 md:pt-16">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-12">
-          <div className="w-full shrink-0 overflow-hidden rounded-2xl md:w-80">
-            <img
+          <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-2xl md:w-80">
+            <Image
               src="/images/profile.jpg"
               alt="Rocky - Surf Instructor in Canggu, Bali"
-              className="aspect-square w-full object-cover object-top"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 320px"
+              priority
             />
           </div>
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { GOOGLE_MAPS_URL } from "@/lib/constants";
 
 const PHOTOS = [
@@ -23,12 +24,13 @@ export default function Gallery() {
         {/* Desktop: 3x2 grid layout */}
         <div className="grid grid-cols-3 gap-3">
           {PHOTOS.map((photo, i) => (
-            <div key={i} className="overflow-hidden rounded-xl">
-              <img
+            <div key={i} className="relative aspect-4/3 overflow-hidden rounded-xl">
+              <Image
                 src={photo.src}
                 alt={photo.alt}
-                className="aspect-4/3 w-full object-cover transition-transform duration-300 hover:scale-105"
-                loading="lazy"
+                fill
+                className="object-cover transition-transform duration-300 hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
           ))}
