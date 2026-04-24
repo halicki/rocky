@@ -21,6 +21,20 @@ Columns: date | action | target | commit | notes
 | 2026-04-21 | Rule 4 | /private-surf-lesson-bali | d924c92 | FAQ section + FAQPage JSON-LD on untouched pos-5.7 page; impr +5 to 134; all actions in crawl delay |
 | 2026-04-23 | Rule 4 | /blog/best-time-to-surf-canggu | 0502af8 | BreadcrumbList JSON-LD on highest-impression blog post (62 impr, pos 39.9, confirmed improving); impr +22 to 156 |
 | 2026-04-24 | Rule 4 | /surf-lesson-prices-bali | a337608 | BreadcrumbList JSON-LD — first breadcrumb on a landing page; complements Service+AggregateRating; GSC window static (ends 2026-04-20), 156 impr |
+| 2026-04-24 | PERF (poza pętlą) | Hero + Gallery + About | 20f1a49 | hero.mp4 4.3MB→1.6MB (-63%), hero.webm usunięty, Gallery/About <img>→<Image>; LCP 9.7s→2.8s, payload 5.1MB→3.2MB |
+| 2026-04-24 | ASSETS (poza pętlą) | public/images/ | ff98f55 | 3 zdjęcia z @surfingwithrocky Instagram z SEO nazwami (beginner lesson, portrait, all-ages) |
+| 2026-04-24 | STRATEGY (poza pętlą) | docs/seo-log/PLAYBOOK.md | fc27f5b | PLAYBOOK v2 — content-first: blog post co ≥3 dni jako twardy trigger, Rule 4 max 2x/tydzień, tygodniowe klastry |
+
+## Ważne — następna akcja pętli
+
+**2026-04-25 (jutro): OBOWIĄZKOWY BLOG POST** — pętla NIE napisała jeszcze żadnego nowego posta MDX.
+Licznik "ostatni nowy post" = NIGDY → trigger Rule 2 odpala się natychmiast.
+
+- Target: `src/app/blog/how-much-surf-lesson-cost-bali/page.mdx`
+- Query: "how much does a surf lesson cost in bali" / "surfing lessons bali price"
+- Zdjęcie: `surf-instructor-rocky-beginner-lesson-batu-bolong-canggu.jpg` (już w public/images/)
+- Min. 1200 słów, ArticleSchema + BreadcrumbList + FAQPage schema — wszystkie trzy naraz
+- 3+ internal linki do: /surf-lesson-prices-bali, /surf-lessons-canggu, /beginner-surf-lessons-bali
 
 ## Trend observations
 
