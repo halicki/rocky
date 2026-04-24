@@ -20,6 +20,7 @@ Columns: date | action | target | commit | notes
 
 | 2026-04-21 | Rule 4 | /private-surf-lesson-bali | d924c92 | FAQ section + FAQPage JSON-LD on untouched pos-5.7 page; impr +5 to 134; all actions in crawl delay |
 | 2026-04-23 | Rule 4 | /blog/best-time-to-surf-canggu | 0502af8 | BreadcrumbList JSON-LD on highest-impression blog post (62 impr, pos 39.9, confirmed improving); impr +22 to 156 |
+| 2026-04-24 | Rule 4 | /surf-lesson-prices-bali | a337608 | BreadcrumbList JSON-LD — first breadcrumb on a landing page; complements Service+AggregateRating; GSC window static (ends 2026-04-20), 156 impr |
 
 ## Trend observations
 
