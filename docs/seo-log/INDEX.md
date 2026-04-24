@@ -24,17 +24,12 @@ Columns: date | action | target | commit | notes
 | 2026-04-24 | PERF (poza pętlą) | Hero + Gallery + About | 20f1a49 | hero.mp4 4.3MB→1.6MB (-63%), hero.webm usunięty, Gallery/About <img>→<Image>; LCP 9.7s→2.8s, payload 5.1MB→3.2MB |
 | 2026-04-24 | ASSETS (poza pętlą) | public/images/ | ff98f55 | 3 zdjęcia z @surfingwithrocky Instagram z SEO nazwami (beginner lesson, portrait, all-ages) |
 | 2026-04-24 | STRATEGY (poza pętlą) | docs/seo-log/PLAYBOOK.md | fc27f5b | PLAYBOOK v2 — content-first: blog post co ≥3 dni jako twardy trigger, Rule 4 max 2x/tydzień, tygodniowe klastry |
+| 2026-04-25 | Rule 2 | /blog/how-much-surf-lesson-cost-bali | dd344c8 | First new blog post — "How Much Does a Surf Lesson Cost in Bali?"; 1200w, ArticleSchema+BreadcrumbList+FAQPage, 3 internal links; impr +4 to 160 |
 
 ## Ważne — następna akcja pętli
 
-**2026-04-25 (jutro): OBOWIĄZKOWY BLOG POST** — pętla NIE napisała jeszcze żadnego nowego posta MDX.
-Licznik "ostatni nowy post" = NIGDY → trigger Rule 2 odpala się natychmiast.
-
-- Target: `src/app/blog/how-much-surf-lesson-cost-bali/page.mdx`
-- Query: "how much does a surf lesson cost in bali" / "surfing lessons bali price"
-- Zdjęcie: `surf-instructor-rocky-beginner-lesson-batu-bolong-canggu.jpg` (już w public/images/)
-- Min. 1200 słów, ArticleSchema + BreadcrumbList + FAQPage schema — wszystkie trzy naraz
-- 3+ internal linki do: /surf-lesson-prices-bali, /surf-lessons-canggu, /beginner-surf-lessons-bali
+**2026-04-26**: Rule 6 candidate — BreadcrumbList na `/batu-bolong-surf` (18 impr, pos 25.1, last landing page without breadcrumb).
+**2026-04-28**: Rule 2 mandatory content trigger — next post: "Private vs group surf lessons in Bali" (`private-vs-group-surf-lesson-bali`).
 
 ## Trend observations
 
