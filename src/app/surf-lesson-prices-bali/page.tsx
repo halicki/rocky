@@ -148,6 +148,25 @@ const VALUE_POINTS = [
   },
 ];
 
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://surfingwithrocky.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Surf Lesson Prices Bali",
+      item: "https://surfingwithrocky.com/surf-lesson-prices-bali",
+    },
+  ],
+};
+
 const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -209,6 +228,10 @@ export default function SurfLessonPricesBali() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
