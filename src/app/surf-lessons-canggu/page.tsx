@@ -390,6 +390,54 @@ export default function SurfLessonsCanggu() {
           </div>
         </section>
 
+        {/* What to Expect */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                Your First Session
+              </p>
+              <h2 className="mb-4 font-heading text-3xl font-bold md:text-4xl">
+                Surf Lessons in Canggu — What to Expect
+              </h2>
+            </div>
+            <div className="space-y-5 text-sm leading-relaxed text-text-secondary md:text-base">
+              <p>
+                If you&apos;ve never surfed before, surf lessons in Canggu are the easiest entry
+                point in all of Bali. Batu Bolong&apos;s waves are slow, predictable and roll in
+                from a sandy bottom — there&apos;s no reef under your feet, no heavy take-off,
+                and no sudden close-outs. That combination is rare in Indonesia, which is exactly
+                why thousands of first-timers choose Canggu over Uluwatu or Padang Padang each
+                year.
+              </p>
+              <p>
+                A typical session with Rocky starts on the sand. We go through a 10-minute warm-up
+                covering paddle technique, the pop-up motion and basic ocean safety — currents,
+                where to sit, how to fall safely. Once you feel ready we paddle out together.
+                Rocky stays with you the whole time, pushing you into the right waves at the
+                right moment. Most beginners stand up on their first lesson; nearly everyone
+                stands up by the end of the second.
+              </p>
+              <p>
+                You don&apos;t need to be fit, athletic or a strong swimmer. Comfort in waist-deep
+                water is enough. Bring board shorts or a swimsuit, sunscreen (reef-safe please),
+                a water bottle and a towel — everything else is included. The board you&apos;ll
+                use is a soft-top longboard, the most stable shape on the market and the safest
+                for both you and other surfers in the line-up. We size it to your height and
+                weight on the day.
+              </p>
+              <p>
+                Lessons run year-round. Wet season (November–March) generally brings smaller,
+                cleaner waves in the morning and is actually one of the best times for absolute
+                beginners. Dry season (April–October) sees more crowded line-ups but bigger,
+                punchier waves once you&apos;re past the first few lessons. Early sessions
+                (6–9 AM) are calmer and less crowded — book the day before via WhatsApp and
+                Rocky will confirm a spot the same evening.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq" className="bg-bg-dark px-6 pb-16 md:pb-24">
           <div className="mx-auto max-w-3xl">
