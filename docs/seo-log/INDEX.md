@@ -25,11 +25,12 @@ Columns: date | action | target | commit | notes
 | 2026-04-24 | ASSETS (poza pętlą) | public/images/ | ff98f55 | 3 zdjęcia z @surfingwithrocky Instagram z SEO nazwami (beginner lesson, portrait, all-ages) |
 | 2026-04-24 | STRATEGY (poza pętlą) | docs/seo-log/PLAYBOOK.md | fc27f5b | PLAYBOOK v2 — content-first: blog post co ≥3 dni jako twardy trigger, Rule 4 max 2x/tydzień, tygodniowe klastry |
 | 2026-04-25 | Rule 2 | /blog/how-much-surf-lesson-cost-bali | dd344c8 | First new blog post — "How Much Does a Surf Lesson Cost in Bali?"; 1200w, ArticleSchema+BreadcrumbList+FAQPage, 3 internal links; impr +4 to 160 |
+| 2026-04-26 | Rule 1 | /surf-lessons-canggu | ea6df36 | Striking-distance push: new H2 "Surf Lessons in Canggu — What to Expect" + ~360w section (logistics, gear, seasons); page at pos 12.8, 12 impr; site impr +9 to 169 |
 
 ## Ważne — następna akcja pętli
 
-**2026-04-26**: Rule 6 candidate — BreadcrumbList na `/batu-bolong-surf` (18 impr, pos 25.1, last landing page without breadcrumb).
 **2026-04-28**: Rule 2 mandatory content trigger — next post: "Private vs group surf lessons in Bali" (`private-vs-group-surf-lesson-bali`).
+**2026-04-28+**: Rule 6 BreadcrumbList on `/batu-bolong-surf` (20 impr, pos 23.4, improving) — once Rule 6 weekly budget resets.
 
 ## Trend observations
 
