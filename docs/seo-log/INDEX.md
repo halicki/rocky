@@ -26,11 +26,12 @@ Columns: date | action | target | commit | notes
 | 2026-04-24 | STRATEGY (poza pętlą) | docs/seo-log/PLAYBOOK.md | fc27f5b | PLAYBOOK v2 — content-first: blog post co ≥3 dni jako twardy trigger, Rule 4 max 2x/tydzień, tygodniowe klastry |
 | 2026-04-25 | Rule 2 | /blog/how-much-surf-lesson-cost-bali | dd344c8 | First new blog post — "How Much Does a Surf Lesson Cost in Bali?"; 1200w, ArticleSchema+BreadcrumbList+FAQPage, 3 internal links; impr +4 to 160 |
 | 2026-04-26 | Rule 1 | /surf-lessons-canggu | ea6df36 | Striking-distance push: new H2 "Surf Lessons in Canggu — What to Expect" + ~360w section (logistics, gear, seasons); page at pos 12.8, 12 impr; site impr +9 to 169 |
+| 2026-04-27 | Rule 2 | /blog/private-vs-group-surf-lesson-bali | b81c7b4 | Second new MDX post — ~1700w "Private vs Group Surf Lessons in Bali"; ArticleSchema+BreadcrumbList+FAQPage(6Q), 4 internal links; Rule 1 blocked by orthogonality on 2 of 3 candidates; site impr +2 to 171 |
 
 ## Ważne — następna akcja pętli
 
-**2026-04-28**: Rule 2 mandatory content trigger — next post: "Private vs group surf lessons in Bali" (`private-vs-group-surf-lesson-bali`).
-**2026-04-28+**: Rule 6 BreadcrumbList on `/batu-bolong-surf` (20 impr, pos 23.4, improving) — once Rule 6 weekly budget resets.
+**2026-04-28**: Rule 1 candidate — `/batu-bolong-surf` (pos 23.4, 20 impr) eligible for BreadcrumbList (Rule 6) once weekly budget resets. Otherwise Rule 1 striking-distance still gated by orthogonality (`/surf-lessons-canggu` until 2026-05-03, `/surf-lesson-prices-bali` until 2026-05-01).
+**2026-04-30**: next mandatory content trigger (3 days after 2026-04-27 post). Next priority topic: #3 "What to wear surfing in Bali" (`what-to-wear-surfing-bali`).
 
 ## Trend observations
 
