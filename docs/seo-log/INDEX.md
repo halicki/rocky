@@ -28,6 +28,7 @@ Columns: date | action | target | commit | notes
 | 2026-04-26 | Rule 1 | /surf-lessons-canggu | ea6df36 | Striking-distance push: new H2 "Surf Lessons in Canggu — What to Expect" + ~360w section (logistics, gear, seasons); page at pos 12.8, 12 impr; site impr +9 to 169 |
 | 2026-04-27 | Rule 2 | /blog/private-vs-group-surf-lesson-bali | b81c7b4 | Second new MDX post — ~1700w "Private vs Group Surf Lessons in Bali"; ArticleSchema+BreadcrumbList+FAQPage(6Q), 4 internal links; Rule 1 blocked by orthogonality on 2 of 3 candidates; site impr +2 to 171 |
 | 2026-04-28 | Rule 2 | /blog/what-to-wear-surfing-bali | 6b1240e | Third new MDX post — ~1900w "What to Wear Surfing in Bali"; ArticleSchema+BreadcrumbList+FAQPage(6Q), 5 internal links; Rule 1 still blocked by orthogonality, Rule 2 fall-through (topic #3); site impr +2 to 173 |
+| 2026-04-29 | Rule 6 | /batu-bolong-surf | 111f8b2 | BreadcrumbList JSON-LD on landing without breadcrumb (20 impr, pos 23.4, has TouristAttraction+FAQPage); breaks 3-day Rule 2 streak per Day 13 notes; GSC window static (2026-04-25 end), totals flat at 173 impr |
 
 ## Ważne — następna akcja pętli
 
