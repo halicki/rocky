@@ -164,6 +164,25 @@ const ROCKY_TIPS = [
   },
 ];
 
+const BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://surfingwithrocky.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Batu Bolong Surf",
+      item: "https://surfingwithrocky.com/batu-bolong-surf",
+    },
+  ],
+};
+
 const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "TouristAttraction",
@@ -197,6 +216,10 @@ export default function BatuBolongSurf() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }}
       />
       <LandingNavbar />
 
