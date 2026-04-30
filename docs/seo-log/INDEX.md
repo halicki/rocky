@@ -34,7 +34,7 @@ Columns: date | action | target | commit | notes
 ## Ważne — następna akcja pętli
 
 **2026-04-29**: 4 days in a row of Rule 2 would be excessive — switch to Rule 6 BreadcrumbList on `/batu-bolong-surf` (pos 23.4, 20 impr; weekly polish budget reset since last polish 2026-04-24) or Rule 5 (image SEO filename audit, 234 image impr / pos 80.9 / 0 clicks). Rule 1 still gated: `/surf-lessons-canggu` lifts 2026-05-03, `/surf-lesson-prices-bali` lifts 2026-05-01.
-**2026-05-01**: next mandatory content trigger (3 days after 2026-04-28 post). Next priority topic: #4 "Best surf spots in Canggu for intermediate surfers" (`best-surf-spots-canggu-intermediates`).
+**2026-05-01**: **MANDATORY Rule 2** content trigger (3 days after 2026-04-28 post). Topic #4 "Best surf spots in Canggu for intermediate surfers" (`best-surf-spots-canggu-intermediates`). Note: Rule 1 cooldowns also lift today (`/surf-lesson-prices-bali` 2026-05-01, `/surf-lessons-canggu` 2026-05-03) — but Rule 2 mandatory trigger wins. Run-state hygiene: future loops MUST inspect `git log origin/master..HEAD` before acting (2026-04-30 had 2 collided auto-runs).
 
 ## Trend observations
 
