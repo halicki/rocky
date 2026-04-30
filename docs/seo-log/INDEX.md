@@ -30,6 +30,7 @@ Columns: date | action | target | commit | notes
 | 2026-04-28 | Rule 2 | /blog/what-to-wear-surfing-bali | 6b1240e | Third new MDX post — ~1900w "What to Wear Surfing in Bali"; ArticleSchema+BreadcrumbList+FAQPage(6Q), 5 internal links; Rule 1 still blocked by orthogonality, Rule 2 fall-through (topic #3); site impr +2 to 173 |
 | 2026-04-29 | Rule 6 | /batu-bolong-surf | 111f8b2 | BreadcrumbList JSON-LD on landing without breadcrumb (20 impr, pos 23.4, has TouristAttraction+FAQPage); breaks 3-day Rule 2 streak per Day 13 notes; GSC window static (2026-04-25 end), totals flat at 173 impr |
 | 2026-04-30 | Rule 5 | sitemap + home | 2791e99, e858765 | First-ever Rule 5: image sitemap (15 `<image:image>` entries across 6 landings) + ImageGallery+ImageObject JSON-LD on `/`; targets sustained 236 image impr / pos 81 / 0 clicks. **Loop guardrail violation**: 2 code commits in one day (auto-runs collided); discarded a 3rd stray edit. GSC window advanced (now 2026-04-27 end), impr +6 to 179 |
+| 2026-05-01 | Rule 2 | /blog/best-surf-spots-canggu-intermediates | 95354ed | Mandatory 3-day content trigger. Fourth new MDX post — ~1700w "Best Surf Spots in Canggu for Intermediates" (Batu Bolong, Old Man's, Echo, Berawa, Pererenan); ArticleSchema+BreadcrumbList+FAQPage(6Q), 6 internal links. Cluster A now has 4 posts. GSC window frozen at 2026-04-27 for 2nd day, totals static at 179 impr |
 
 ## Ważne — następna akcja pętli
 
