@@ -148,6 +148,43 @@ const VALUE_POINTS = [
   },
 ];
 
+const FAQ_ITEMS = [
+  {
+    q: "How much do surf lessons in Bali cost in 2026?",
+    a: "Surf lesson prices in Bali range from around 200,000 IDR for shared group lessons up to 800,000+ IDR at high-end resort schools. Rocky's surf lesson prices start at 400,000 IDR (~$25 USD) for a single ~90-minute private session at Batu Bolong Beach in Canggu, with all equipment included. The 3-pack at 1,050,000 IDR works out to 350K per session and is the best value for surfers who want real progress.",
+  },
+  {
+    q: "What is included in the surf lesson price?",
+    a: "Every surf lesson at Rocky's includes a foam longboard sized to you, a UV rashguard, a safety briefing on currents and the reef, in-water coaching, and post-session feedback. There are no hidden fees on the beach — the surfing lesson Bali price you see is the full price you pay. Photos and video are available on request. Transport to the beach is the only thing not covered.",
+  },
+  {
+    q: "Why are some surf lessons in Bali cheaper?",
+    a: "Cheaper lessons in Canggu (under 250K IDR) are usually shared group sessions with one instructor coaching 4–6 people at once, often with limited English and basic gear. Rocky's lessons are private — one instructor, one student (or two for couples) — at one of the best beginner waves in Bali. You're paying for personal attention, 20+ years of local experience, and a 5.0-star track record across 82 Google reviews.",
+  },
+  {
+    q: "Is the surf lesson price per person or per group?",
+    a: "Single Session and 3-Pack prices are per person. The Couples / Friends package (750K IDR) is for two people sharing the lesson — that works out to 375K per person, the cheapest per-head rate Rocky offers. Group bookings of 3+ people are quoted individually based on group size and scheduling needs.",
+  },
+  {
+    q: "Can I pay in USD or only Indonesian Rupiah?",
+    a: "Prices are quoted in IDR because that is the currency of Indonesia, but Rocky accepts cash payment in USD, EUR, AUD, or IDR at the prevailing exchange rate. Card and digital wallet payment can be arranged in advance via WhatsApp. There are no surcharges on top of the listed surf lesson prices regardless of payment method.",
+  },
+  {
+    q: "Do I need to book in advance and pay a deposit?",
+    a: "Booking 24–48 hours in advance via WhatsApp is recommended, especially during high season (June–September and December–January). Rocky does not require a deposit for single bookings — payment is in cash on the day. For group bookings of 3+ people, a 50% deposit may be requested to confirm the date.",
+  },
+];
+
+const FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
 const BREADCRUMB_LD = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -235,6 +272,10 @@ export default function SurfLessonPricesBali() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }}
       />
       <LandingNavbar />
 
@@ -443,6 +484,42 @@ export default function SurfLessonPricesBali() {
               >
                 Read 82 Reviews →
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ — Surf Lesson Prices Bali */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                Pricing FAQ
+              </p>
+              <h2 className="font-heading text-3xl font-bold md:text-4xl">
+                Surf Lesson Prices Bali — 2026 FAQ
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-sm text-text-secondary">
+                Everything beginners ask about the surfing lesson Bali price before booking — what&apos;s
+                included, why some lessons cost less, and how Rocky&apos;s pricing compares.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {FAQ_ITEMS.map((item) => (
+                <details
+                  key={item.q}
+                  className="group rounded-xl border border-border-subtle bg-bg-card p-5 transition-colors open:border-accent-blue/40"
+                >
+                  <summary className="flex cursor-pointer items-start justify-between gap-4 font-heading text-base font-semibold">
+                    <span>{item.q}</span>
+                    <span className="mt-0.5 shrink-0 text-accent-blue transition-transform group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+                    {item.a}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
