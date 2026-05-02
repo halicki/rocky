@@ -472,6 +472,16 @@ export default function SurfLessonsCanggu() {
             { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
           ]}
         />
+
+        <ExploreMoreLinks
+          title="From the Blog"
+          links={[
+            { href: "/blog/how-much-surf-lesson-cost-bali", label: "How Much Does a Surf Lesson Cost?" },
+            { href: "/blog/private-vs-group-surf-lesson-bali", label: "Private vs Group Lessons" },
+            { href: "/blog/what-to-wear-surfing-bali", label: "What to Wear Surfing in Bali" },
+            { href: "/blog/best-surf-spots-canggu-intermediates", label: "Best Surf Spots in Canggu" },
+          ]}
+        />
       </main>
 
       <FinalCTA />
