@@ -134,6 +134,25 @@ const FAQ_JSON_LD = {
   })),
 };
 
+const BREADCRUMB_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://surfingwithrocky.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Private Surf Lesson Bali",
+      item: "https://surfingwithrocky.com/private-surf-lesson-bali",
+    },
+  ],
+};
+
 const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -183,6 +202,10 @@ export default function PrivateSurfLessonBali() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
       />
       <LandingNavbar />
 
