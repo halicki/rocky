@@ -145,6 +145,49 @@ const FAQ_SCHEMA = {
   })),
 };
 
+const MONTHLY_CONDITIONS = [
+  {
+    months: "May – July",
+    label: "Peak Dry Season",
+    swell: "1.0 – 1.8m",
+    wind: "Offshore SE all day",
+    crowd: "Building",
+    note: "The most consistent batu bolong surf of the year. Swell from the south fills in, the southeast trades hold offshore from sunrise until late afternoon and the surface stays clean. Beginners get glassy knee-to-waist insiders; intermediates get rideable shoulders out the back.",
+  },
+  {
+    months: "August – September",
+    label: "Prime + Crowds",
+    swell: "1.2 – 2.0m",
+    wind: "Offshore SE, stronger",
+    crowd: "Heavy 7AM – 10AM",
+    note: "Largest, cleanest waves of the year. The Magicseaweed Batu Bolong forecast lights up green almost daily. The trade-off: this is high tourist season, so book lessons for 6AM dawn patrol to dodge the crowd.",
+  },
+  {
+    months: "October – November",
+    label: "Shoulder Season",
+    swell: "0.8 – 1.5m",
+    wind: "Variable, lighter",
+    crowd: "Thinning fast",
+    note: "Wind switches start mid-morning and afternoon storms appear. Mornings are still excellent for beginners. The Pantai Batu Bolong line-up empties out — best value period for a private lesson.",
+  },
+  {
+    months: "December – February",
+    label: "Wet Season",
+    swell: "0.5 – 1.2m",
+    wind: "Onshore W after 9AM",
+    crowd: "Almost empty",
+    note: "Smaller, softer swell with onshore wind by mid-morning — actually the easiest waves of the year for first-time surfers. Pre-7AM sessions can be glassy and the beach is yours. Pack a rain jacket; afternoon storms are dramatic but short.",
+  },
+  {
+    months: "March – April",
+    label: "Transition",
+    swell: "0.6 – 1.4m",
+    wind: "Light, switching",
+    crowd: "Light",
+    note: "Wind starts tilting back to offshore in March. By April the dry season is rebuilding. Mixed conditions — some days flat, some days great — but the classic Canggu surf scene is waking up again.",
+  },
+];
+
 const ROCKY_TIPS = [
   {
     tip: "Arrive before 8AM",
@@ -416,6 +459,73 @@ export default function BatuBolongSurf() {
               >
                 💬 Ask Rocky for Today&apos;s Surf Report
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Batu Bolong Surf Report by Month */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-12 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                Year-Round Guide
+              </p>
+              <h2 className="font-heading text-3xl font-bold md:text-4xl">
+                Batu Bolong Surf Report by Month
+              </h2>
+              <p className="mt-4 text-text-secondary">
+                Batu Bolong surf is good every month of the year — but the wave, wind and crowd
+                story changes a lot between seasons. Here is what a daily Batu Bolong surf report
+                actually looks like across the calendar, based on Rocky&apos;s 20+ years on this beach.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {MONTHLY_CONDITIONS.map((m) => (
+                <div
+                  key={m.months}
+                  className="rounded-xl border border-border-subtle bg-bg-card p-6"
+                >
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-accent-blue">
+                    {m.label}
+                  </p>
+                  <h3 className="mb-3 font-heading text-lg font-bold">{m.months}</h3>
+                  <ul className="mb-3 space-y-1 text-xs text-text-secondary">
+                    <li><span className="text-accent-coral">Swell:</span> {m.swell}</li>
+                    <li><span className="text-accent-coral">Wind:</span> {m.wind}</li>
+                    <li><span className="text-accent-coral">Crowd:</span> {m.crowd}</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-text-secondary">{m.note}</p>
+                </div>
+              ))}
+            </div>
+            <div className="prose-custom mx-auto mt-10 max-w-3xl space-y-4 text-text-secondary">
+              <p className="text-base leading-relaxed">
+                Whatever month you arrive on Bali, Pantai Batu Bolong is the safest call for a
+                first wave. If you are travelling between May and September, expect classic
+                offshore mornings and book your{" "}
+                <a href="/surf-lessons-canggu" className="text-accent-blue underline">
+                  surf lessons in Canggu
+                </a>{" "}
+                early — the lineup fills fast. Off-peak (December – February) means smaller
+                waves but quieter sessions, which is why a lot of complete beginners actually
+                prefer it for their{" "}
+                <a href="/beginner-surf-lessons-bali" className="text-accent-blue underline">
+                  first surf lesson in Bali
+                </a>
+                .
+              </p>
+              <p className="text-base leading-relaxed">
+                Looking for a one-on-one session away from the crowd peaks? A{" "}
+                <a href="/private-surf-lesson-bali" className="text-accent-blue underline">
+                  private surf lesson at Batu Bolong
+                </a>{" "}
+                lets Rocky pick the best peak of the day for your level. For pricing across all
+                lesson formats — group, private, kids and multi-day packages — see the full{" "}
+                <a href="/surf-lesson-prices-bali" className="text-accent-blue underline">
+                  Bali surf lesson price guide
+                </a>
+                .
+              </p>
             </div>
           </div>
         </section>
