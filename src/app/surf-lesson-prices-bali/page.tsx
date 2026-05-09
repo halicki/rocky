@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import ExploreMoreLinks from "@/components/landing/ExploreMoreLinks";
 import Footer from "@/components/Footer";
@@ -408,6 +409,71 @@ export default function SurfLessonPricesBali() {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Hourly breakdown — Rule 1 strike-distance content for surfing lessons bali price cluster */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-8 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                By The Numbers
+              </p>
+              <h2 className="font-heading text-3xl font-bold md:text-4xl">
+                Surf Lesson Prices in Bali — Hourly Breakdown
+              </h2>
+            </div>
+            <div className="space-y-4 text-sm leading-relaxed text-text-secondary">
+              <p>
+                The surfing lesson Bali price most schools quote is per-session, not per-hour, which makes
+                it hard to compare offers. Here is the actual surf lesson cost in Bali at Rocky&apos;s broken
+                down by minute, so you can see exactly what you pay for. Every session is a private ~90-minute
+                lesson at Batu Bolong Beach in Canggu — board, rashguard, and coaching included.
+              </p>
+              <div className="overflow-hidden rounded-xl border border-border-subtle">
+                <div className="grid grid-cols-3 gap-4 bg-bg-card px-5 py-3 text-xs font-semibold uppercase tracking-wider text-text-secondary/70">
+                  <span>Package</span>
+                  <span>Per Session</span>
+                  <span>Per Hour (≈)</span>
+                </div>
+                <div className="grid grid-cols-3 gap-4 px-5 py-3 text-sm">
+                  <span className="font-semibold">Single Session</span>
+                  <span>400K IDR ($25)</span>
+                  <span>267K IDR ($17)</span>
+                </div>
+                <div className="grid grid-cols-3 gap-4 bg-bg-card px-5 py-3 text-sm">
+                  <span className="font-semibold">3-Pack (per lesson)</span>
+                  <span>350K IDR ($22)</span>
+                  <span>233K IDR ($15)</span>
+                </div>
+                <div className="grid grid-cols-3 gap-4 px-5 py-3 text-sm">
+                  <span className="font-semibold">Couples (per person)</span>
+                  <span>375K IDR ($24)</span>
+                  <span>250K IDR ($16)</span>
+                </div>
+              </div>
+              <p>
+                That puts Rocky&apos;s surf lesson prices Bali at roughly $15–17 per hour of in-water private
+                instruction — competitive with a 60-minute Balinese massage, a yoga drop-in class, or a
+                mid-range Canggu dinner. For most beginners the 3-pack works out cheapest per hour and gives
+                you enough water time to actually stand up and ride a green wave by lesson three.
+              </p>
+              <p>
+                Want context on what an entry-level lesson actually feels like? Read{" "}
+                <Link href="/blog/how-much-surf-lesson-cost-bali" className="text-accent-blue hover:underline">
+                  how much a surf lesson costs in Bali across schools
+                </Link>{" "}
+                for a market-wide comparison, or compare formats in{" "}
+                <Link href="/blog/private-vs-group-surf-lesson-bali" className="text-accent-blue hover:underline">
+                  private vs group surf lessons in Bali
+                </Link>
+                . If you are still picking a beach,{" "}
+                <Link href="/batu-bolong-surf" className="text-accent-blue hover:underline">
+                  Batu Bolong&apos;s gentle conditions
+                </Link>{" "}
+                are why every package on this page is taught at the same break.
+              </p>
             </div>
           </div>
         </section>
