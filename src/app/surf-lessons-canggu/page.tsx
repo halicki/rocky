@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LandingNavbar from "@/components/LandingNavbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
@@ -433,6 +434,62 @@ export default function SurfLessonsCanggu() {
                 punchier waves once you&apos;re past the first few lessons. Early sessions
                 (6–9 AM) are calmer and less crowded — book the day before via WhatsApp and
                 Rocky will confirm a spot the same evening.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Batu Bolong Beach Surf Lessons */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                Location & Logistics
+              </p>
+              <h2 className="mb-4 font-heading text-3xl font-bold md:text-4xl">
+                Batu Bolong Beach Surf Lessons — Where to Meet
+              </h2>
+            </div>
+            <div className="space-y-5 text-sm leading-relaxed text-text-secondary md:text-base">
+              <p>
+                All of our Batu Bolong Beach surf lessons start right on the sand in front of
+                Old Man&apos;s — the iconic Canggu beach bar that sits at the south end of the
+                break. If you&apos;ve never been, the easiest landmark for a surfing lesson in
+                Canggu is the long line of surfboards stacked along the wall: that&apos;s our
+                meeting point. Park your scooter at Old Man&apos;s lot (10K IDR for the morning),
+                walk down the steps, and Rocky will be waiting with your board and rashguard
+                already laid out. No need to bring anything except swimwear, sunscreen and
+                drinking water.
+              </p>
+              <p>
+                Batu Bolong Beach is the most popular beginner spot on the whole island and the
+                reason a surf lesson Canggu Bali experience is different from anywhere else in
+                Indonesia. The reef sits 80–100 metres offshore and breaks the swell down to
+                gentle, rolling whitewater long before it reaches you. From shore to take-off
+                zone is a 2-minute paddle on a longboard. The sandy bottom inside the break
+                means a wipeout costs you nothing more than a quick rinse. By contrast, almost
+                every other surf school in Bali — Padang, Uluwatu, Bingin — operates over live
+                reef where mistakes hurt. That single geography difference is why first-time
+                surfers learn 2–3x faster in Canggu.
+              </p>
+              <p>
+                Sessions run twice daily: a sunrise slot at 6:30 AM (glassy water, very small
+                crowd) and a morning slot at 9:30 AM (warmer, busier, better for hesitant
+                swimmers). Afternoon lessons are possible from 3:30 PM in low season when the
+                wind allows — message Rocky on WhatsApp the night before and he&apos;ll confirm
+                conditions. Want the full price breakdown before booking? See{" "}
+                <Link href="/surf-lesson-prices-bali" className="text-accent-blue underline-offset-2 hover:underline">
+                  surf lesson prices in Bali
+                </Link>
+                . Solo traveller debating the format? Read our guide to{" "}
+                <Link href="/blog/private-vs-group-surf-lesson-bali" className="text-accent-blue underline-offset-2 hover:underline">
+                  private vs group surf lessons in Bali
+                </Link>
+                . And if you want the full wave-by-wave breakdown of the spot itself,{" "}
+                <Link href="/batu-bolong-surf" className="text-accent-blue underline-offset-2 hover:underline">
+                  Batu Bolong&apos;s surf conditions
+                </Link>{" "}
+                are detailed month by month on our beach page.
               </p>
             </div>
           </div>
