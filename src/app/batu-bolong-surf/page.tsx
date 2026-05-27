@@ -530,6 +530,58 @@ export default function BatuBolongSurf() {
           </div>
         </section>
 
+        {/* Batu Bolong Surf School */}
+        <section className="bg-bg-dark px-6 pb-16 md:pb-24">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                Learn Here
+              </p>
+              <h2 className="font-heading text-3xl font-bold md:text-4xl">
+                Batu Bolong Surf School — What Makes a Good One
+              </h2>
+            </div>
+            <div className="prose-custom mx-auto max-w-3xl space-y-5 text-text-secondary">
+              <p className="text-base leading-relaxed">
+                A good Batu Bolong surf school does three things well: it reads the daily wave
+                report before you arrive, it picks the safest peak on the beach for your level,
+                and it gives you genuine one-on-one attention in the water. Anything less and you
+                end up paddling next to ten other beginners while one instructor shouts from the
+                sand — common at Batu Bolong Beach in high season, and the reason most travellers
+                book a small or private operation instead.
+              </p>
+              <p className="text-base leading-relaxed">
+                Rocky runs a small Batu Bolong surf school out of this beach — two students per
+                coach maximum, board and rashguard included, and the lesson is timed to the tide
+                rather than the clock. That is the difference between a 90-minute session where
+                you stand up twice and a 90-minute session where you actually start reading the
+                wave. If you are weighing options for{" "}
+                <a href="/blog/best-surf-school-bali-how-to-choose" className="text-accent-blue underline">
+                  how to choose a surf school in Bali
+                </a>
+                , the filters are simple: instructor-to-student ratio, local water knowledge,
+                tide-aware scheduling, and a real safety brief before you paddle out.
+              </p>
+              <p className="text-base leading-relaxed">
+                What makes Batu Bolong Beach surf lessons easier than other Bali breaks: the
+                sand bottom, the long forgiving inside section, and the short paddle. Most first-
+                time students at this beach stand up within their first two waves. If you have
+                surfed before, the outside peak holds shoulder-high faces during dry season and
+                Rocky will move you off the white-water within a single session. Group sizes,
+                schedules and packages are described in the broader{" "}
+                <a href="/surf-lessons-canggu" className="text-accent-blue underline">
+                  Canggu surf lesson guide
+                </a>
+                , and exact pricing — solo, private, kids, multi-day — is on the{" "}
+                <a href="/surf-lesson-prices-bali" className="text-accent-blue underline">
+                  Bali surf lesson price page
+                </a>
+                . Book one lesson, see if it clicks, then decide on more.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Batu Bolong FAQ */}
         <section className="bg-bg-dark px-6 pb-16 md:pb-24">
           <div className="mx-auto max-w-3xl">
