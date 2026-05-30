@@ -282,6 +282,90 @@ export default function BeginnerSurfLessonsBali() {
           </div>
         </section>
 
+        {/* What to expect — first-timer deep dive (striking-distance content) */}
+        <section className="bg-bg-dark px-6 pb-16">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-8 text-center">
+              <p className="mb-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent-coral">
+                First-Timer Guide
+              </p>
+              <h2 className="font-heading text-2xl font-bold md:text-3xl">
+                What to Expect from Beginner Surf Lessons in Bali
+              </h2>
+            </div>
+            <div className="space-y-5 text-sm leading-relaxed text-text-secondary md:text-base">
+              <p>
+                Booking{" "}
+                <strong className="text-white/90">
+                  beginner surf lessons in Bali
+                </strong>{" "}
+                is the easiest way to go from never having touched a board to
+                riding your first wave — often on the same day. Bali, and{" "}
+                <Link
+                  href="/surf-lessons-canggu"
+                  className="text-accent-blue transition-colors hover:text-accent-blue/80"
+                >
+                  Canggu in particular
+                </Link>
+                , is one of the best places on earth to learn: the water is warm
+                year-round, the sandy bottom at{" "}
+                <Link
+                  href="/batu-bolong-surf"
+                  className="text-accent-blue transition-colors hover:text-accent-blue/80"
+                >
+                  Batu Bolong Beach
+                </Link>{" "}
+                is forgiving if you fall, and the slow, rolling white-water waves
+                give a first-timer the time they need to find their feet.
+              </p>
+              <p>
+                <strong className="text-white/90">
+                  How many lessons does it take?
+                </strong>{" "}
+                Most complete beginners stand up and ride white water in their
+                very first session. To paddle out on your own, read the line-up
+                and catch unbroken &ldquo;green&rdquo; waves with some
+                consistency, plan on three to five lessons. Everyone progresses
+                at their own pace — Rocky adjusts each session to where you
+                actually are, not a fixed script.
+              </p>
+              <p>
+                <strong className="text-white/90">
+                  When should beginners come?
+                </strong>{" "}
+                Batu Bolong is beginner-friendly all year, but the dry season
+                (roughly April–October) tends to bring cleaner, smaller morning
+                waves that are ideal for learning. Early starts also mean
+                glassier water and a quieter line-up, which makes your first
+                surf lesson far less intimidating.
+              </p>
+              <p>
+                <strong className="text-white/90">Group or private?</strong>{" "}
+                Both work for beginners. Small group lessons are social and a
+                little cheaper;{" "}
+                <Link
+                  href="/private-surf-lesson-bali"
+                  className="text-accent-blue transition-colors hover:text-accent-blue/80"
+                >
+                  private surf lessons
+                </Link>{" "}
+                give you Rocky&apos;s full attention and usually the fastest
+                progress. If you&apos;re nervous about the ocean or learning on a
+                short trip, private is worth it. You can compare what each option
+                costs on the{" "}
+                <Link
+                  href="/surf-lesson-prices-bali"
+                  className="text-accent-blue transition-colors hover:text-accent-blue/80"
+                >
+                  surf lesson prices in Bali
+                </Link>{" "}
+                page — beginner sessions start from 400K IDR with all gear
+                included.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Reviews from beginners */}
         <section className="bg-bg-dark px-6 pb-16 md:pb-24">
           <div className="mx-auto max-w-5xl text-center">
