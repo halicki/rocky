@@ -8,9 +8,9 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Surf Lesson Prices Bali 2026 | From $25 USD | Rocky",
+  title: "Surf Lesson Prices Bali 2026 — From $25, No Hidden Fees",
   description:
-    "Surf lesson prices in Bali from 400K IDR (~$25 USD). Single, 3-pack & couples packages. All gear included. 82 five-star reviews. Book via WhatsApp.",
+    "Surf lesson prices in Bali: private sessions from 400K IDR (~$25), all gear included, no hidden fees. 82 five-star reviews. Book on WhatsApp.",
   keywords: [
     "surf lesson prices Bali",
     "how much surf lessons Bali",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "https://surfingwithrocky.com/surf-lesson-prices-bali",
   },
   openGraph: {
-    title: "Surf Lesson Prices Bali 2026 | From $25 USD | Rocky",
+    title: "Surf Lesson Prices Bali 2026 — From $25, No Hidden Fees",
     description:
       "Transparent surf lesson pricing at Batu Bolong, Canggu. From $25 USD per session. All gear included. 82 five-star reviews on Google.",
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Surf Lesson Prices Bali 2026 | From $25 USD | Rocky",
+    title: "Surf Lesson Prices Bali 2026 — From $25, No Hidden Fees",
     description:
       "Surf lesson prices in Bali from 400K IDR (~$25 USD). Single, 3-pack & couples packages. All gear included. 82 five-star reviews.",
   },
