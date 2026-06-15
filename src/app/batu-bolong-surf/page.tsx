@@ -670,6 +670,16 @@ export default function BatuBolongSurf() {
             { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
           ]}
         />
+
+        <ExploreMoreLinks
+          title="From the Blog"
+          links={[
+            { href: "/blog/batu-bolong-surf-forecast", label: "Reading the Batu Bolong Forecast" },
+            { href: "/blog/canggu-surf-forecast", label: "Canggu Surf Forecast Guide" },
+            { href: "/blog/is-batu-bolong-good-for-beginners", label: "Batu Bolong for Beginners" },
+            { href: "/blog/best-time-to-surf-canggu", label: "Best Time to Surf Canggu" },
+          ]}
+        />
       </main>
 
       <FinalCTA />
