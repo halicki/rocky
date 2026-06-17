@@ -5,6 +5,7 @@ import Lessons from "@/components/Lessons";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import Gallery from "@/components/Gallery";
+import ExploreMoreLinks from "@/components/landing/ExploreMoreLinks";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -54,6 +55,15 @@ export default function Home() {
       <Reviews />
       <FAQ />
       <Gallery />
+      <ExploreMoreLinks
+        title="From the Blog"
+        links={[
+          { href: "/blog/kids-surf-lessons-canggu", label: "Kids Surf Lessons in Canggu" },
+          { href: "/blog/what-to-bring-surf-lesson-bali", label: "What to Bring to a Surf Lesson" },
+          { href: "/blog/canggu-surf-forecast", label: "Canggu Surf Forecast Guide" },
+          { href: "/blog/surf-lessons-near-me-canggu", label: "Surf Lessons Near Me in Canggu" },
+        ]}
+      />
       <FinalCTA />
       <Footer />
       <WhatsAppFloat />
