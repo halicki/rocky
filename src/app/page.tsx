@@ -59,6 +59,7 @@ export default function Home() {
         title="From the Blog"
         links={[
           { href: "/blog/kids-surf-lessons-canggu", label: "Kids Surf Lessons in Canggu" },
+          { href: "/blog/family-surf-lessons-bali", label: "Family Surf Lessons in Bali" },
           { href: "/blog/what-to-bring-surf-lesson-bali", label: "What to Bring to a Surf Lesson" },
           { href: "/blog/canggu-surf-forecast", label: "Canggu Surf Forecast Guide" },
           { href: "/blog/surf-lessons-near-me-canggu", label: "Surf Lessons Near Me in Canggu" },
