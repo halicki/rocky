@@ -188,6 +188,25 @@ const JSON_LD = {
   ],
 };
 
+const BREADCRUMB_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://surfingwithrocky.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Surf Lessons Canggu",
+      item: "https://surfingwithrocky.com/surf-lessons-canggu",
+    },
+  ],
+};
+
 export default function SurfLessonsCanggu() {
 
   return (
@@ -199,6 +218,10 @@ export default function SurfLessonsCanggu() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
       />
       <LandingNavbar />
 
