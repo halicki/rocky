@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/submit-sitemap.mjs",
     "start": "next start",
     "lint": "eslint",
-    "gsc:snapshot": "node --env-file=.env.local scripts/gsc-snapshot.mjs"
+    "gsc:snapshot": "node --env-file=.env.local scripts/gsc-snapshot.mjs",
+    "gsc:submit": "node --env-file=.env.local scripts/submit-sitemap.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
