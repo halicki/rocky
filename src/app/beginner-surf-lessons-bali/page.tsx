@@ -157,6 +157,25 @@ const JSON_LD = {
   },
 };
 
+const BREADCRUMB_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://surfingwithrocky.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Beginner Surf Lessons Bali",
+      item: "https://surfingwithrocky.com/beginner-surf-lessons-bali",
+    },
+  ],
+};
+
 export default function BeginnerSurfLessonsBali() {
 
   return (
@@ -168,6 +187,10 @@ export default function BeginnerSurfLessonsBali() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
       />
       <LandingNavbar />
 
