@@ -58,11 +58,14 @@ export default function Home() {
       <ExploreMoreLinks
         title="From the Blog"
         links={[
+          { href: "/blog/intermediate-surf-coaching-canggu", label: "Intermediate Surf Coaching in Canggu" },
+          { href: "/blog/how-to-plan-surf-trip-bali", label: "How to Plan a Surf Trip to Bali" },
+          { href: "/blog/solo-surf-lessons-canggu", label: "Solo Surf Lessons in Canggu" },
+          { href: "/blog/learn-to-surf-over-40-bali", label: "Learn to Surf Over 40 in Bali" },
           { href: "/blog/kids-surf-lessons-canggu", label: "Kids Surf Lessons in Canggu" },
           { href: "/blog/family-surf-lessons-bali", label: "Family Surf Lessons in Bali" },
-          { href: "/blog/what-to-bring-surf-lesson-bali", label: "What to Bring to a Surf Lesson" },
-          { href: "/blog/canggu-surf-forecast", label: "Canggu Surf Forecast Guide" },
           { href: "/blog/surf-lessons-near-me-canggu", label: "Surf Lessons Near Me in Canggu" },
+          { href: "/blog/canggu-surf-forecast", label: "Canggu Surf Forecast Guide" },
         ]}
       />
       <FinalCTA />
