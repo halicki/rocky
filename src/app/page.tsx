@@ -58,7 +58,7 @@ export default function Home() {
       <ExploreMoreLinks
         title="From the Blog"
         links={[
-          { href: "/blog/intermediate-surf-coaching-canggu", label: "Intermediate Surf Coaching in Canggu" },
+          { href: "/blog/intermediate-surf-coaching-canggu", label: "Intermediate Surf Lessons in Canggu" },
           { href: "/blog/how-to-plan-surf-trip-bali", label: "How to Plan a Surf Trip to Bali" },
           { href: "/blog/solo-surf-lessons-canggu", label: "Solo Surf Lessons in Canggu" },
           { href: "/blog/learn-to-surf-over-40-bali", label: "Learn to Surf Over 40 in Bali" },
