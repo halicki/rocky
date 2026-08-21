@@ -1,4 +1,4 @@
-# SEO Action Playbook — v3
+# SEO Action Playbook — v4
 
 Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i wybiera **pierwszą**, która pasuje.
 
@@ -21,17 +21,92 @@ Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i
 >    dla każdej reguły i nie naprawią się same.
 > 5. **Rule 2 ownership audit.** Przy 37 postach "duża pula" i "wolna pula" to już dwie różne rzeczy.
 > 6. **Mechanical sweep.** Limit 3 plików blokuje naprawy czysto mechaniczne (patrz: canonicale).
+>
+> **v4 (2026-08-20): Zasada nadrzędna przestaje być nierozwiązywalna.** Trzy poprawki, wszystkie
+> z dowodami zamkniętymi przed datą zapisu. Powód: obowiązkowy trigger contentu został pominięty
+> **trzy przebiegi z rzędu** (08-17, 08-19, 08-20), bo zderza się z własną bramką Rule 2 — twardy
+> obowiązek kontra twardy audyt, bez wyjścia. Pętla nie łamała reguły; reguła nie miała rozwiązania.
+>
+> 7. **Rytm contentu dostaje mianownik i wyjście.** Obowiązek zostaje, ale jego walutą przestaje
+>    być wyłącznie nowy post. Po trzech konwersjach z rzędu — eskalacja do właściciela.
+> 8. **Próg objętości dla tematów Rule 2.** Trzy zamknięte odczyty pokazują, że wynik posta śledzi
+>    wielkość puli startowej niemal liniowo. Priority 2 zawieszony do 08-28.
+> 9. **Rule 1 — trzecie wyjście: "nazwane i dalej przegrywa".** Dwa przebiegi (08-16, 08-20)
+>    odrzuciły tę samą stronę z powodu, którego reguła nie umiała nazwać.
+>
+> **Świadomie NIE zapisane w v4** (dowody jeszcze w locie — zapis przed odczytem to dokładnie ten
+> błąd, dla którego powstało v3):
+> - **Ocena pasma na query zamiast na stronie** — czeka na odczyt 08-15 strike'u, **≥2026-08-22**.
+> - **Kolejność drabiny Rule 1 vs Rule 4** — czeka na sparowany odczyt 08-19 + 08-20,
+>   **≥2026-08-27**. Pytanie zadane dwustronnie: 08-16 Rule 1 wyparł kolejkę CTR, 08-20 Rule 4
+>   wyparł Rule 1-B. Obie strony rozstrzyga ten sam test.
 
 ---
 
-## Zasada nadrzędna: rytm contentu
+## Zasada nadrzędna: rytm contentu  *(przepisana w v4 — poprawka 7)*
 
-**Co 3 dzień roboczy → OBOWIĄZKOWY nowy post blogowy (Rule 2)**, niezależnie od tego czy
-inne reguły pasują. Sprawdź w INDEX.md datę ostatniego posta — jeśli minęły ≥3 dni bez
-nowego MDX, Rule 2 wchodzi automatycznie na pozycję #1.
+**Co 3 dzień roboczy → OBOWIĄZKOWA akcja contentowa**, niezależnie od tego czy inne reguły
+pasują. Sprawdź w INDEX.md datę ostatniej akcji contentowej — jeśli minęły ≥3 dni, wchodzi
+ona automatycznie na pozycję #1 w drabinie.
 
-Dlaczego: jeden post 1200 słów = więcej długoterminowego SEO-value niż 10 schema tweaków.
-Strona ma 3 posty. Potrzebuje 15–20 żeby budować topical authority.
+**Akcją contentową jest jedna z dwóch rzeczy — i to jest cała zmiana v4:**
+
+| Warunek | Akcja obowiązkowa |
+|---|---|
+| **Istnieje pula, która przechodzi Krok 0 audytu własności ORAZ próg objętości** | **Rule 2 — nowy post MDX** |
+| **Żadna pula nie przechodzi** | **KONWERSJA: zwężenie istniejącego underperformera** (Rule 1-B lub konsolidacja dwóch stron kanibalizujących się) |
+
+Konwersja **nie jest pominięciem** i nie kasuje długu. Wymaga wpisu w logu w formacie:
+
+```
+RULE 2 CONVERTED: brak kwalifikującej się puli (konwersja N/3)
+AUDIT: <tabela pul: pula | wyświetlenia | właściciel | werdykt>
+SUBSTITUTE: <strona + na czym polegało zwężenie>
+```
+
+**Licznik i eskalacja — bezpiecznik przeciw patowi.** Nowy post MDX zeruje oba liczniki.
+Eskalacja odpala się, gdy zajdzie **którykolwiek** z dwóch warunków:
+
+- **3 konwersje pod rząd** — liczy się tylko *decyzje* przebiegu. Przebieg, który w ogóle się
+  nie odbył, **nie jest konwersją** i licznika nie rusza (choć powiększa dług dni).
+- **≥7 dni od ostatniego nowego posta MDX** — łapie ten sam pat wtedy, gdy powstał z
+  pominiętych przebiegów, a nie z decyzji.
+
+Po odpaleniu run **nie wybiera kolejnego substytutu**, tylko wypisuje w logu ticket do
+właściciela — *„audyt własności nie przepuścił żadnej puli od N przebiegów; potrzebna decyzja:
+(a) keyword research poza GSC, (b) zniesienie zakazu redakcyjnego na pulę Uluwatu, (c) zgoda na
+post bez wsparcia w danych"* — i dopiero po odpowiedzi wraca do normalnego rytmu.
+
+> **Dlaczego v4 to zmienia.** Uzasadnienie v2 brzmiało: *„Strona ma 3 posty. Potrzebuje 15–20
+> żeby budować topical authority."* Na 2026-08-20 strona ma **36 postów, z czego 7 ma zero
+> wyświetleń**. Przesłanka jest nieaktualna, a reguła zbudowana na niej zderzała się z Krokiem 0
+> Rule 2, który słusznie kwalifikuje nowy post na zajętej puli jako **doorway page**. Obowiązek
+> i bramka były jednocześnie twarde, więc pętla stanęła: 08-17 (run pominięty), 08-19 (Rule 4
+> bez zapisanego powodu), 08-20 (Rule 4, powód zapisany). Dwie zgodne rekomendacje z logów
+> 08-15 i 08-16 — *„następna akcja contentowa powinna zwężać istniejącego underperformera,
+> a nie dokładać 37. post"* — stają się tu regułą zamiast pobożnego życzenia.
+>
+> Jeden post 1200 słów **na wolnej puli** dalej bije 10 schema tweaków. Ten sam post na puli
+> zajętej to kanibalizacja — a tego v2 nie odróżniało.
+
+**STAN NA 2026-08-21 — ESKALACJA ODPALONA. 🎫 Czeka na decyzję właściciela.**
+
+Konwersje pod rząd: **2/3** (08-19, 08-20) — próg trzech konwersji NIE został osiągnięty.
+Odpalił **drugi warunek**: ostatni nowy post MDX to **2026-08-14** (`surf-lessons-for-women-bali`),
+czyli **7 dni**. Przebieg 08-21 wykonał audyt własności zgodnie z klauzulą wyjścia — **audyt
+oblał po raz siódmy z rzędu**, żadna pula nie jest jednocześnie wolna i ≥30 wyświetleń
+(największa niezajęta intencja w całym raporcie 127 query to `berawa beach surfing`,
+**1 wyświetlenie**). Ticket wypisany w `docs/seo-log/2026-08-21.md`; opcje: (a) keyword research
+spoza GSC, (b) zniesienie zakazu redakcyjnego na pulę Uluwatu, (c) zgoda na post bez danych.
+
+⚠️ **Dopóki właściciel nie odpowie, obowiązek contentowy pozostaje zeskalowany.** Przebieg, który
+zastanie ticket bez odpowiedzi, **nie wymyśla czwartej opcji i nie wraca do pisania postów** —
+schodzi drabiną niżej i zapisuje to jednym zdaniem. Nowy post MDX (po decyzji) zeruje oba liczniki.
+
+**Odczyt przebiegu 08-21 co do zakresu eskalacji** (do ewentualnego nadpisania wprost przez
+przyszły przebieg, nie po cichu): „run nie wybiera kolejnego substytutu" znaczy, że pozycja #1
+drabiny rozwiązuje się ticketem — a nie że przebieg nie wykonuje żadnej akcji. 08-21 wypisał
+ticket i wykonał Rule 1-B.
 
 ---
 
@@ -75,6 +150,29 @@ Nazwij query w **istniejącej strukturze**. Nie dopisujesz nowej treści:
 **Dodanie sekcji 300–500 słów jest wyjątkiem i wymaga dowodu**, że strona ma **lukę treściową**
 (brakuje tematu, o który pyta query), a nie **lukę słownikową** (temat jest, tylko opisany innym
 słowem). Dowód zapisujesz w logu **przed** edycją. Jeśli nie umiesz go sformułować — nie dodawaj.
+
+**Trzecie wyjście: „nazwane i dalej przegrywa" (v4, poprawka 9).**
+
+Reguła miała dotąd dwa wyjścia — *brak kandydata w paśmie* i *strona query-anonimowa*. Brakowało
+trzeciego, i przez to dwa przebiegi z rzędu musiały uzasadniać odrzucenie prozą zamiast regułą.
+
+> **Warunek**: dokładne query występuje już w `<title>`, `<meta description>`, którymś `<h2>`
+> **i** w lede, a jego pozycja mimo to nie poprawiła się (albo pogorszyła) przez ≥3 okna.
+>
+> **Diagnoza**: to problem **autorytetu / trafności domeny**, którego żadna dźwignia on-page
+> nie dosięga. Nazywanie zostało wykonane i nie zadziałało.
+>
+> **Akcja**: zapisz stronę jako *„named and still losing"*, weź następnego kandydata.
+> **Nie dodawaj sekcji, żeby to zrekompensować** — to jest dokładnie ten odruch, który
+> wyprodukował osiem nieudanych strike'ów z lipca i sierpnia.
+
+**Przypadek źródłowy.** `/surf-lesson-prices-bali/` (254 impr @ 13.5) przechodzi wszystkie trzy
+bramki wejściowe i po tie-breakerze #2 bije zwykle wybieranych kandydatów kilkunastokrotnie na
+objętości. Mimo to jest złym celem: fraza *„the surfing lesson Bali price"* stoi w widocznej
+treści **trzykrotnie** (wstawiona 05-02 i 05-09, wraz z komentarzem w kodzie nazywającym klaster),
+strona ma tabelę cen, rozbicie godzinowe, FAQ(6Q) oraz Service + AggregateRating + BreadcrumbList
+— a query `surfing lessons bali price` idzie **43.5 → 44.7**. Odrzucona ręcznie 08-16, ponownie
+08-20. Od v4 odrzuca ją reguła.
 
 > **Dlaczego (dane pętli, 2026-08-09/10).** Maj: cztery strike'i, cztery potwierdzone sukcesy —
 > batu-bolong 14.6→8.3, prices 14.5→8.1, surf-lessons-canggu 10.4→9.2, best-time 11.8→8.9.
@@ -146,14 +244,52 @@ dowodem przyczynowym: post z 08-03 `batu-bolong-beach-canggu-guide` przeszedł *
 z pierwszym kliknięciem w historii** — a strona kontrolna `/batu-bolong-surf/` stała **dead flat
 @ 9.2 przez pięć kolejnych okien** przy rosnących wyświetleniach. Zero szkody dla incumbenta.
 
-**2. Obiekcja lub audytorium bez własnej strony.** Klaster najlepiej konwertujący na stronie:
-over-40 17.6% CTR, video-analysis 20%, family 5.3%, kids 3.2% — wobec 0.1% na dużych stronach
-forecastowych. Około **200× lepsza konwersja na wyświetlenie**. Dopuszczalny **bez wsparcia
-w GSC**, ale tylko gdy strony na ten temat **nie ma w ogóle**: brak wyświetleń dla tematu, o którym
-nigdy nie napisaliśmy, jest nieinformatywny. Jeśli strona istnieje i mimo to zero query — to jest
-dowód braku popytu i temat się skreśla (tak zginął post o deskach).
+**2. Obiekcja lub audytorium bez własnej strony.** ⛔ **ZAWIESZONE do 2026-08-28 (v4, poprawka 8).**
+Klaster najlepiej konwertujący na stronie: over-40 17.6% CTR, video-analysis 20%, family 5.3%,
+kids 3.2% — wobec 0.1% na dużych stronach forecastowych, czyli ~200× lepsza konwersja na
+wyświetlenie. To uzasadniało dopuszczenie tematu **bez wsparcia w GSC**, gdy strony na temat nie
+ma w ogóle.
+
+Argument jest dziś **żywy dwa razy i przegrywa oba razy**: post o kondycji (08-09) ma **1
+wyświetlenie przez cztery okna**, deadline nulla **08-23**; post dla kobiet (08-14) ma **2
+wyświetlenia**, pierwszy odczyt **08-21**, deadline **08-28**. Przy trzech wcześniejszych
+sukcesach (over-40, can't-swim, video-analysis) bilans wynosi 3–0–2-w-toku.
+
+**Do czasu obu odczytów Priority 2 nie może być podstawą nowego posta.** Nie dlatego, że
+argument jest obalony — nie jest — tylko dlatego, że trzecia instancja opublikowana przed
+rozstrzygnięciem dwóch pierwszych **zanieczyszcza dowód, który pętla sama zaplanowała**.
+Po 08-28: dwa nulle → Priority 2 dostaje twardy próg popytu (np. ≥5 wyświetleń na temat
+pokrewny) albo znika; przynajmniej jeden sukces → wraca bez zmian.
 
 **3. Pula GSC ≥30 impr, pozycja >30**, która przeszła ownership audit.
+
+---
+
+**PRÓG OBJĘTOŚCI — obowiązkowy dla Priority 1 i 3 (v4, poprawka 8).**
+
+**Pula docelowa musi mieć ≥30 wyświetleń w oknie 28-dniowym**, liczone jako suma wariantów
+query, które nowa strona faktycznie przejmie. Poniżej progu **temat się odrzuca, a nie
+„bierze z zastrzeżeniem"**.
+
+Trzy zamknięte odczyty układają się niemal liniowo względem wielkości puli startowej:
+
+| Post | Pula startowa | Wynik | Werdykt |
+|---|---|---|---|
+| **08-03** `batu-bolong-beach-canggu-guide` | **42 impr @ 43.6** (`batu bolong beach`) | 1 → **800 impr**, `batu bolong beach` 43.6 → **13.5**, kontrola bez szwanku | ✅ **sukces, jedyny wzorzec z dowodem przyczynowym** |
+| **08-06** `surf-lessons-seminyak-kuta-legian` | **~10 impr** | 4 → **63 impr**, ale pozycja **28.3 → 29.0 płasko przez trzy okna**, ~11 wariantów, **0 kliknięć w 14 dni** | ⚠️ **szeroki, ale płytki** |
+| **08-09** `do-you-need-to-be-fit-to-surf-bali` | **0 impr** (Priority 2) | **1 impr @ 4.0** przez cztery okna | ❌ **zmierza do nulla** |
+
+Wniosek, który zmienia zachowanie: **nowa strona niezawodnie kupuje ekspozycję, ale rankuje
+tylko wtedy, gdy pula startowa była realna.** „Cienka baza" nie jest ryzykiem do zapisania
+w logu — to przewidywalny mechanizm produkujący stronę szeroką i płytką, czyli kolejny wpis
+na liście stron z zerem kliknięć.
+
+**Konsekwencja dla fallbacku.** Log 08-16 pre-rejestrował Berawa (~10 impr) jako „najmniej złą"
+opcję awaryjną. Na 08-20 Berawa to **7 wyświetleń, z czego 6 to `magicseaweed berawa`** — query
+forecastowe należące do trzech innych stron — więc realnie wolna intencja to
+`berawa beach surfing`, **1 wyświetlenie @ 50.0**. Fallback **oblał własny audyt** i zostaje
+skreślony. Nie ma „awaryjnego tematu": jeśli próg nie jest spełniony, uruchamia się konwersja
+z Zasady nadrzędnej.
 
 **Guard kanibalizacyjny — obowiązkowy w każdym poście.** Każdy sąsiadujący temat oddany
 właścicielowi jednym zdaniem i linkiem. Zero języka konkurencyjnej strony w `<title>`/H1/H2:
