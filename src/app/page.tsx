@@ -66,6 +66,10 @@ export default function Home() {
           { href: "/blog/family-surf-lessons-bali", label: "Family Surf Lessons in Bali" },
           { href: "/blog/surf-lessons-near-me-canggu", label: "Surf Lessons Near Me in Canggu" },
           { href: "/blog/canggu-surf-forecast", label: "Canggu Surf Report & Forecast Guide" },
+          { href: "/blog/batu-bolong-beach-canggu-guide", label: "Batu Bolong Beach — Complete Guide" },
+          { href: "/blog/surf-camp-vs-surf-lessons-bali", label: "Surf Camp vs Surf Lessons in Bali" },
+          { href: "/blog/surf-lessons-for-women-bali", label: "Surf Lessons for Women in Bali" },
+          { href: "/blog/do-you-need-to-be-fit-to-surf-bali", label: "Do You Need to Be Fit to Surf?" },
         ]}
       />
       <FinalCTA />
