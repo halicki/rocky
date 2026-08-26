@@ -231,7 +231,7 @@ export default function SurfLessonsCanggu() {
           className="relative flex min-h-[70vh] items-center justify-center bg-bg-dark px-6 pt-24 pb-16"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, rgba(17,17,17,0.55) 0%, rgba(17,17,17,0.85) 100%), url('/images/photo2.jpg')",
+              "linear-gradient(to bottom, rgba(17,17,17,0.55) 0%, rgba(17,17,17,0.85) 100%), url('/images/rocky-teaching-surf-stance-batu-bolong-canggu.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

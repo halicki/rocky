@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 const HERO_IMAGES = [
-  "/images/photo2.jpg",
-  "/images/photo1.jpg",
-  "/images/photo6.jpg",
-  "/images/photo3.jpg",
-  "/images/photo5.jpg",
-  "/images/photo4.jpg",
+  "/images/rocky-teaching-surf-stance-batu-bolong-canggu.jpg",
+  "/images/surf-lesson-batu-bolong-beach-canggu-bali.jpg",
+  "/images/kids-surf-lesson-batu-bolong-beach-canggu.jpg",
+  "/images/surf-instructor-coaching-student-batu-bolong-canggu.jpg",
+  "/images/sunset-surf-session-batu-bolong-beach-bali.jpg",
+  "/images/group-surf-lesson-canggu-bali.jpg",
 ];
 
 export default function Hero() {

@@ -215,7 +215,7 @@ export default function PrivateSurfLessonBali() {
           className="relative flex min-h-[70vh] items-center justify-center px-6 pt-24 pb-16"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, rgba(17,17,17,0.5) 0%, rgba(17,17,17,0.88) 100%), url('/images/photo5.jpg')",
+              "linear-gradient(to bottom, rgba(17,17,17,0.5) 0%, rgba(17,17,17,0.88) 100%), url('/images/sunset-surf-session-batu-bolong-beach-bali.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

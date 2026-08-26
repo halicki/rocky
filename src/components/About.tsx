@@ -8,7 +8,7 @@ export default function About() {
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-12">
           <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-2xl md:w-80">
             <Image
-              src="/images/profile.jpg"
+              src="/images/rocky-surf-instructor-about-canggu-bali.jpg"
               alt="Rocky - Surf Instructor in Canggu, Bali"
               fill
               className="object-cover object-top"

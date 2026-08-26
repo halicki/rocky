@@ -272,7 +272,7 @@ export default function BatuBolongSurf() {
           className="relative flex min-h-[70vh] items-center justify-center px-6 pt-24 pb-16"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, rgba(17,17,17,0.45) 0%, rgba(17,17,17,0.88) 100%), url('/images/photo1.jpg')",
+              "linear-gradient(to bottom, rgba(17,17,17,0.45) 0%, rgba(17,17,17,0.88) 100%), url('/images/surf-lesson-batu-bolong-beach-canggu-bali.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

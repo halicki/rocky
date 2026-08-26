@@ -200,7 +200,7 @@ export default function BeginnerSurfLessonsBali() {
           className="relative flex min-h-[70vh] items-center justify-center px-6 pt-24 pb-16"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, rgba(17,17,17,0.5) 0%, rgba(17,17,17,0.88) 100%), url('/images/photo4.jpg')",
+              "linear-gradient(to bottom, rgba(17,17,17,0.5) 0%, rgba(17,17,17,0.88) 100%), url('/images/group-surf-lesson-canggu-bali.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

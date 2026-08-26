@@ -2,12 +2,12 @@ import Image from "next/image";
 import { GOOGLE_MAPS_URL } from "@/lib/constants";
 
 const PHOTOS = [
-  { src: "/images/photo1.jpg", alt: "Surf lesson at Batu Bolong Beach Canggu Bali" },
-  { src: "/images/photo2.jpg", alt: "Rocky teaching surf stance on Batu Bolong Beach Canggu" },
-  { src: "/images/photo3.jpg", alt: "Rocky surf instructor coaching student at Batu Bolong" },
-  { src: "/images/photo4.jpg", alt: "Surfing With Rocky group lesson Canggu Bali" },
-  { src: "/images/photo5.jpg", alt: "Sunset surf session at Batu Bolong Beach Bali" },
-  { src: "/images/photo6.jpg", alt: "Surfing With Rocky team and kids at Batu Bolong Beach" },
+  { src: "/images/surf-lesson-batu-bolong-beach-canggu-bali.jpg", alt: "Surf lesson at Batu Bolong Beach Canggu Bali" },
+  { src: "/images/rocky-teaching-surf-stance-batu-bolong-canggu.jpg", alt: "Rocky teaching surf stance on Batu Bolong Beach Canggu" },
+  { src: "/images/surf-instructor-coaching-student-batu-bolong-canggu.jpg", alt: "Rocky surf instructor coaching student at Batu Bolong" },
+  { src: "/images/group-surf-lesson-canggu-bali.jpg", alt: "Surfing With Rocky group lesson Canggu Bali" },
+  { src: "/images/sunset-surf-session-batu-bolong-beach-bali.jpg", alt: "Sunset surf session at Batu Bolong Beach Bali" },
+  { src: "/images/kids-surf-lesson-batu-bolong-beach-canggu.jpg", alt: "Surfing With Rocky team and kids at Batu Bolong Beach" },
 ];
 
 export default function Gallery() {
