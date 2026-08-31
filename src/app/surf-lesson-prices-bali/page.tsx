@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "surf instructor cost Bali",
   ],
   alternates: {
-    canonical: "https://surfingwithrocky.com/surf-lesson-prices-bali",
+    canonical: "https://surfingwithrocky.com/surf-lesson-prices-bali/",
   },
   openGraph: {
     title: "Surf Lesson Prices Bali 2026 — From $25, No Hidden Fees",

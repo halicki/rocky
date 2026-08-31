@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "surf classes Canggu",
   ],
   alternates: {
-    canonical: "https://surfingwithrocky.com/surf-lessons-canggu",
+    canonical: "https://surfingwithrocky.com/surf-lessons-canggu/",
   },
   openGraph: {
     title: "Surf Lessons in Canggu, Bali | Surfing With Rocky",

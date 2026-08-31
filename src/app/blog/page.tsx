@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Surf tips, wave guides, and insider knowledge from Rocky — a professional surf instructor with 20+ years at Batu Bolong Beach, Canggu, Bali.",
   alternates: {
-    canonical: `${SITE_URL}/blog`,
+    canonical: `${SITE_URL}/blog/`,
   },
   openGraph: {
     title: "Surf Blog — Tips & Guides for Beginners | Surfing With Rocky",

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "surf Batu Bolong Canggu",
   ],
   alternates: {
-    canonical: "https://surfingwithrocky.com/batu-bolong-surf",
+    canonical: "https://surfingwithrocky.com/batu-bolong-surf/",
   },
   openGraph: {
     title: "Surfing Batu Bolong Beach Canggu | Surfing With Rocky",

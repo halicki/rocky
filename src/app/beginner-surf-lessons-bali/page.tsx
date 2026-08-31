@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "surf school for beginners Bali",
   ],
   alternates: {
-    canonical: "https://surfingwithrocky.com/beginner-surf-lessons-bali",
+    canonical: "https://surfingwithrocky.com/beginner-surf-lessons-bali/",
   },
   openGraph: {
     title: "Beginner Surf Lessons in Bali | Surfing With Rocky",
