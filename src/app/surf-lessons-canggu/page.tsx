@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Book surf lessons in Canggu, Bali with Rocky at Batu Bolong Beach. Professional instruction for beginners. From 400K IDR.",
     type: "website",
     locale: "en_US",
-    url: "https://surfingwithrocky.com/surf-lessons-canggu",
+    url: "https://surfingwithrocky.com/surf-lessons-canggu/",
     siteName: "Surfing With Rocky",
   },
   twitter: {
@@ -202,7 +202,7 @@ const BREADCRUMB_JSON_LD = {
       "@type": "ListItem",
       position: 2,
       name: "Surf Lessons Canggu",
-      item: "https://surfingwithrocky.com/surf-lessons-canggu",
+      item: "https://surfingwithrocky.com/surf-lessons-canggu/",
     },
   ],
 };

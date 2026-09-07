@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "1-on-1 private surf lessons in Bali at Batu Bolong Beach, Canggu. Personalised coaching, faster progress, photos & video included. Open daily 6AM–6PM.",
     type: "website",
     locale: "en_US",
-    url: "https://surfingwithrocky.com/private-surf-lesson-bali",
+    url: "https://surfingwithrocky.com/private-surf-lesson-bali/",
     siteName: "Surfing With Rocky",
   },
   twitter: {
@@ -148,7 +148,7 @@ const BREADCRUMB_JSON_LD = {
       "@type": "ListItem",
       position: 2,
       name: "Private Surf Lesson Bali",
-      item: "https://surfingwithrocky.com/private-surf-lesson-bali",
+      item: "https://surfingwithrocky.com/private-surf-lesson-bali/",
     },
   ],
 };

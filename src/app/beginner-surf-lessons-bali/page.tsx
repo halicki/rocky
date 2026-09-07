@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "First time surfing? Rocky's beginner surf lessons in Bali are designed for complete first-timers. Ex-lifeguard, 20+ years experience, Batu Bolong Beach Canggu.",
     type: "website",
     locale: "en_US",
-    url: "https://surfingwithrocky.com/beginner-surf-lessons-bali",
+    url: "https://surfingwithrocky.com/beginner-surf-lessons-bali/",
     siteName: "Surfing With Rocky",
   },
   twitter: {
@@ -171,7 +171,7 @@ const BREADCRUMB_JSON_LD = {
       "@type": "ListItem",
       position: 2,
       name: "Beginner Surf Lessons Bali",
-      item: "https://surfingwithrocky.com/beginner-surf-lessons-bali",
+      item: "https://surfingwithrocky.com/beginner-surf-lessons-bali/",
     },
   ],
 };

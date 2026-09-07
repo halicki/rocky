@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Everything you need to know about surfing Batu Bolong Beach in Canggu, Bali. Wave conditions, best times, tide info, and why it's perfect for beginners.",
     type: "website",
     locale: "en_US",
-    url: "https://surfingwithrocky.com/batu-bolong-surf",
+    url: "https://surfingwithrocky.com/batu-bolong-surf/",
     siteName: "Surfing With Rocky",
   },
   twitter: {
@@ -221,7 +221,7 @@ const BREADCRUMB_SCHEMA = {
       "@type": "ListItem",
       position: 2,
       name: "Batu Bolong Surf",
-      item: "https://surfingwithrocky.com/batu-bolong-surf",
+      item: "https://surfingwithrocky.com/batu-bolong-surf/",
     },
   ],
 };
@@ -232,7 +232,7 @@ const JSON_LD = {
   name: "Batu Bolong Beach",
   description:
     "A popular beach break in Canggu, Bali, known for its consistent mellow waves and sandy bottom. One of the best beginner surf spots on the island.",
-  url: "https://surfingwithrocky.com/batu-bolong-surf",
+  url: "https://surfingwithrocky.com/batu-bolong-surf/",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Batu Bolong Beach",

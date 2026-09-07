@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Transparent surf lesson pricing at Batu Bolong, Canggu. From $25 USD per session. All gear included. 82 five-star reviews on Google.",
     type: "website",
     locale: "en_US",
-    url: "https://surfingwithrocky.com/surf-lesson-prices-bali",
+    url: "https://surfingwithrocky.com/surf-lesson-prices-bali/",
     siteName: "Surfing With Rocky",
   },
   twitter: {
@@ -200,7 +200,7 @@ const BREADCRUMB_LD = {
       "@type": "ListItem",
       position: 2,
       name: "Surf Lesson Prices Bali",
-      item: "https://surfingwithrocky.com/surf-lesson-prices-bali",
+      item: "https://surfingwithrocky.com/surf-lesson-prices-bali/",
     },
   ],
 };
