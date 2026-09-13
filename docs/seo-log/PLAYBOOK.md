@@ -1,4 +1,4 @@
-# SEO Action Playbook — v4
+# SEO Action Playbook — v5
 
 Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i wybiera **pierwszą**, która pasuje.
 
@@ -33,6 +33,18 @@ Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i
 >    wielkość puli startowej niemal liniowo. Priority 2 zawieszony do 08-28.
 > 9. **Rule 1 — trzecie wyjście: "nazwane i dalej przegrywa".** Dwa przebiegi (08-16, 08-20)
 >    odrzuciły tę samą stronę z powodu, którego reguła nie umiała nazwać.
+>
+> **v5 (2026-09-13): Pętla dostaje mechanizm poprawiania samej siebie.** Jedna poprawka,
+> wymuszona przez cztery kolejne logi (09-10…09-13), które nazwały "Standing Failure 3": po
+> siedmiu HOLD-ach w 112 przebiegach pętla wiedziała, że playbook wymaga zmiany, ale żaden
+> przebieg nie mógł jej zapisać — brief zabraniał dotykania docs. Pięć "proposed" poprawek v3
+> czekało dziesięć dni z tego samego powodu. Od v5 pętla przenosi się z lokalnego cron-a na
+> rutynę w chmurze (Claude Code cloud Routine), gdzie nie ma przeglądarki — odpada fallback
+> GSC przez Chrome, zostaje wyłącznie API service-account.
+>
+> 10. **Rule 8 — META-run.** Dno drabiny, poniżej Rule 7. Odpala się tylko po ≥3 kolejnych
+>     HOLD-ach i pozwala na **jedną** zmianę w tym pliku, z dowodami zamkniętymi przed zapisem.
+>     Nie może ruszać progów zarejestrowanych odczytów ani zakaz-listy.
 >
 > **Świadomie NIE zapisane w v4** (dowody jeszcze w locie — zapis przed odczytem to dokładnie ten
 > błąd, dla którego powstało v3):
@@ -422,6 +434,44 @@ User wykonuje ręcznie (~5 min). Target queries: `surf lessons canggu`, `surf le
 
 ---
 
+### 8. META-run — poprawka playbooka  🛠️  (DNO DRABINY — max raz w tygodniu)
+
+**Po co**: v3 i v4 powstały dopiero, gdy właściciel ręcznie przepisał plik — po tym, jak
+pętla przez wiele przebiegów *wiedziała*, że reguła jest niesprawna, i nie miała jak tego
+zapisać. Ta reguła jest tym brakującym wyjściem. Nie jest akcją SEO; jest akcją na pętli.
+
+**Warunek** (wszystkie naraz):
+1. Rules 1–7 nie dają dziś żadnej akcji (META-run nigdy nie wypiera realnej akcji).
+2. INDEX pokazuje **≥3 kolejne HOLD-y** bezpośrednio przed dzisiejszym dniem, **albo** ten sam
+   "standing failure" / "proposed fix" jest nazwany w ≥3 logach z ostatnich 10 przebiegów.
+3. Budżet: **max 1 META-run na tydzień (pon–niedz)**; ostatni META-run w INDEX starszy niż 7 dni.
+
+**Akcja**: **jedna** zmiana w `docs/seo-log/PLAYBOOK.md`, i nic więcej:
+- Zakres: dodanie/zmiana **jednej** reguły, bramki, warunku wejścia lub wyjścia, budżetu;
+  max ~40 linii diffu. Nowa wersja w nagłówku (v6, v7…) z datą i jednym akapitem *dlaczego*,
+  w stylu wpisów v3/v4.
+- Dowody: każda poprawka cytuje **≥2 konkretne logi** (daty) i wyłącznie odczyty **już
+  zamknięte**. Zasada v3/v4 obowiązuje bez wyjątku: *zapis przed odczytem to błąd* —
+  jeśli dowód jest jeszcze w locie, poprawka trafia do listy "Świadomie NIE zapisane" z datą
+  odczytu, nie do reguły.
+- Commit: `seo(meta): <co zmieniono> — <dowód>`; to jest jedyny commit "kodu" tego dnia
+  (log dnia idzie osobno jak zawsze). Build uruchomić mimo braku zmian w `src/` (exit 0).
+- Kroki 8–9 (Vercel, smoke test) pominąć z adnotacją w logu — produkcja się nie zmienia.
+
+**Nie wolno** (twarde, nawet gdy warunek spełniony):
+- ruszać progów, dat ani gałęzi **zarejestrowanych odczytów** (Read N) — te zamyka wyłącznie
+  ich własny termin; META-run może co najwyżej zmienić, jak *przyszłe* odczyty są rejestrowane
+- zmieniać Zakaz-listy, limitu plików, limitu commitów ani niniejszej Rule 8
+- luzować bramkę, która zablokowała pętlę **dzisiaj** na podstawie **dzisiejszych** danych
+  (to "przesuwanie poprzeczki po zobaczeniu liczby" — ten sam błąd, którego zakazuje Read 8)
+- zapisywać więcej niż jedną poprawkę naraz, nawet jeśli logi nazwały trzy; kolejne czekają
+  na kolejny tydzień i kolejne 3 HOLD-y
+
+**Po META-runie**: licznik HOLD-ów startuje od zera. Następny przebieg stosuje już nową wersję
+i zapisuje w logu, czy poprawka odblokowała drabinę (`META IMPACT: unblocked <rule>` / `no effect`).
+
+---
+
 ## Tygodniowe klastry tematyczne
 
 Zamiast losowej kolejności akcji, grupuj zmiany wokół jednego tematu w tygodniu.
@@ -464,6 +514,7 @@ impr 2–9 i pozycją 15–50 — to kandydaci do nowych postów lub content exp
   max jedna sekcja na akcję, treść oddana linkiem a nie skasowana, wszystko wypisane w logu
 - ❌ nie robi content rewrite istniejącego bloga ani landing page całościowo — tylko surgical edits
 - ❌ nie rusza `docs/seo-strategy.md`, `docs/LOCAL_PACK_STRATEGY.md`
+- ❌ nie edytuje `PLAYBOOK.md` poza Rule 8 (META-run) — i wtedy tylko w jej granicach
 - ❌ nie zmienia URLi istniejących stron (break canonical/sitemap)
 - ❌ nie commituje więcej niż 3 plików dziennie (wyjątki: 1 nowy post MDX = 1 plik;
   **mechanical sweep** wg definicji w Rule 6 — max raz w tygodniu)
