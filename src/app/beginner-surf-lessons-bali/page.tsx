@@ -507,6 +507,10 @@ export default function BeginnerSurfLessonsBali() {
             { href: "/batu-bolong-surf", label: "About Batu Bolong Beach" },
             { href: "/private-surf-lesson-bali", label: "Private Surf Lessons" },
             { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
+            { href: "/blog/how-long-to-learn-surfing-bali", label: "How Long to Learn to Surf" },
+            { href: "/blog/learn-to-surf-cant-swim-bali", label: "Can't Swim? Can You Still Surf?" },
+            { href: "/blog/what-to-expect-first-surf-lesson-bali", label: "What to Expect on Your First Lesson" },
+            { href: "/blog/surfing-bali-complete-beginners-guide", label: "Complete Beginners Guide to Surfing Bali" },
           ]}
         />
       </main>
