@@ -596,6 +596,10 @@ export default function SurfLessonPricesBali() {
             { href: "/beginner-surf-lessons-bali", label: "Beginner Surf Lessons" },
             { href: "/batu-bolong-surf", label: "About Batu Bolong Beach" },
             { href: "/private-surf-lesson-bali", label: "Private Surf Lessons" },
+            { href: "/blog/how-much-surf-lesson-cost-bali", label: "How Much Does a Surf Lesson Cost?" },
+            { href: "/blog/private-vs-group-surf-lesson-bali", label: "Private vs Group Surf Lessons" },
+            { href: "/blog/surf-camp-vs-surf-lessons-bali", label: "Surf Camp vs Surf Lessons" },
+            { href: "/blog/surf-lesson-gift-bali", label: "Give a Surf Lesson as a Gift" },
           ]}
         />
       </main>
