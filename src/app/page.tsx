@@ -20,6 +20,14 @@ const GALLERY_PHOTOS = [
   { src: "/images/kids-surf-lesson-batu-bolong-beach-canggu.jpg", caption: "Surfing With Rocky team and kids at Batu Bolong Beach" },
 ];
 
+// Rendered by <About /> above the fold (priority-loaded) but absent from the
+// carousel, so it is listed separately here rather than folded into
+// GALLERY_PHOTOS (which also drives the visible gallery order).
+const ABOUT_PHOTO = {
+  src: "/images/rocky-surf-instructor-about-canggu-bali.jpg",
+  caption: "Rocky, surf instructor in Canggu, Bali",
+};
+
 const IMAGE_GALLERY_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "ImageGallery",
@@ -27,7 +35,7 @@ const IMAGE_GALLERY_SCHEMA = {
   description:
     "Photos from beginner, group, private and family surf lessons with Rocky at Batu Bolong Beach in Canggu, Bali.",
   url: new URL("/#gallery", SITE_URL).toString(),
-  image: GALLERY_PHOTOS.map((photo) => ({
+  image: [...GALLERY_PHOTOS, ABOUT_PHOTO].map((photo) => ({
     "@type": "ImageObject",
     contentUrl: new URL(photo.src, SITE_URL).toString(),
     url: new URL(photo.src, SITE_URL).toString(),
