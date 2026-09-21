@@ -488,6 +488,10 @@ export default function PrivateSurfLessonBali() {
             { href: "/beginner-surf-lessons-bali", label: "Beginner Surf Lessons" },
             { href: "/batu-bolong-surf", label: "About Batu Bolong Beach" },
             { href: "/surf-lesson-prices-bali", label: "Surf Lesson Prices Bali" },
+            { href: "/blog/private-vs-group-surf-lesson-bali", label: "Private vs Group Surf Lessons" },
+            { href: "/blog/intermediate-surf-coaching-canggu", label: "Intermediate Surf Coaching" },
+            { href: "/blog/surf-coaching-video-analysis-canggu", label: "Surf Coaching Video Analysis" },
+            { href: "/blog/solo-surf-lessons-canggu", label: "Solo Surf Lessons in Canggu" },
           ]}
         />
       </main>
