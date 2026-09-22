@@ -7,12 +7,13 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Batu Bolong Surf Report & Beginner Guide | Canggu, Bali",
+  title: "Surfline Batu Bolong Surf Report & Forecast | Canggu, Bali",
   description:
-    "Live Batu Bolong surf conditions, daily swell report, wave height, tides and best times to paddle out. A local's guide to Pantai Batu Bolong beach in Canggu — the easiest beginner wave in Bali.",
+    "Surfline Batu Bolong forecast vs. reality: live surf report, wave height, wind, tide and crowd at Pantai Batu Bolong, Canggu — checked by Rocky every morning.",
   keywords: [
     "Batu Bolong surf",
     "Batu Bolong surf report",
+    "surfline batu bolong",
     "pantai batu bolong",
     "Batu Bolong Beach Canggu",
     "magicseaweed Batu Bolong",
@@ -421,7 +422,7 @@ export default function BatuBolongSurf() {
                 Daily Check
               </p>
               <h2 className="font-heading text-3xl font-bold md:text-4xl">
-                Batu Bolong Surf Report & Live Conditions
+                Surfline Batu Bolong: Surf Report & Live Conditions
               </h2>
               <p className="mt-4 text-text-secondary">
                 How to read the forecast — and how Rocky reads it for you.
@@ -429,11 +430,11 @@ export default function BatuBolongSurf() {
             </div>
             <div className="prose-custom mx-auto max-w-3xl space-y-5 text-text-secondary">
               <p className="text-base leading-relaxed">
-                Batu Bolong Beach sits on the southwest coast of Canggu, exposed directly to swells
-                rolling in from the Indian Ocean. Most days of the year it gets waves — the question
-                is how big, how clean, and at what tide. You can pull a Batu Bolong surf report from{" "}
-                <strong>Surfline</strong>, <strong>Magicseaweed</strong> or <strong>Windy</strong>,
-                but raw forecast numbers rarely tell the whole story for beginners.
+                Check a <strong>Surfline Batu Bolong</strong> forecast, a Magicseaweed chart or
+                Windy&apos;s wind model and you will get a number — but Batu Bolong Beach sits on
+                the southwest coast of Canggu, exposed directly to swells rolling in from the
+                Indian Ocean, and raw forecast numbers rarely tell the whole story for beginners.
+                The real question is how big, how clean, and at what tide.
               </p>
               <p className="text-base leading-relaxed">
                 Rocky walks down to the break every morning at sunrise and looks at three things:{" "}
