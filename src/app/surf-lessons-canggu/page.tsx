@@ -560,6 +560,10 @@ export default function SurfLessonsCanggu() {
             { href: "/blog/private-vs-group-surf-lesson-bali", label: "Private vs Group Lessons" },
             { href: "/blog/what-to-wear-surfing-bali", label: "What to Wear Surfing in Bali" },
             { href: "/blog/best-surf-spots-canggu-intermediates", label: "Best Surf Spots in Canggu" },
+            { href: "/blog/when-to-book-surf-lessons-canggu", label: "When to Book Surf Lessons in Canggu" },
+            { href: "/blog/surf-lessons-near-me-canggu", label: "Surf Lessons Near Me in Canggu" },
+            { href: "/blog/kids-surf-lessons-canggu", label: "Kids Surf Lessons in Canggu" },
+            { href: "/blog/canggu-surf-forecast", label: "Canggu Surf Report & Forecast Guide" },
           ]}
         />
       </main>
