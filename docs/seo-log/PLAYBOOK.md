@@ -1,4 +1,4 @@
-# SEO Action Playbook — v5
+# SEO Action Playbook — v6
 
 Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i wybiera **pierwszą**, która pasuje.
 
@@ -45,6 +45,19 @@ Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i
 > 10. **Rule 8 — META-run.** Dno drabiny, poniżej Rule 7. Odpala się tylko po ≥3 kolejnych
 >     HOLD-ach i pozwala na **jedną** zmianę w tym pliku, z dowodami zamkniętymi przed zapisem.
 >     Nie może ruszać progów zarejestrowanych odczytów ani zakaz-listy.
+>
+> **v6 (2026-09-27): Standing Failure 2 zamknięta — Rule 6 i Rule 7 dostają rozłączne budżety.**
+> Jedna poprawka. Precedens „wspólny budżet tygodniowy" dla Rule 6 i Rule 7 (ustalony 09-08,
+> zastosowany 09-09 i 09-11) zablokował Rule 7 na 09-17 wyłącznie dlatego, że Rule 6 wydał już
+> swoje 2/2 tego tygodnia — mimo że żadna z reguł nie ma w swoim własnym tekście (Rule 6: "nie
+> częściej niż 2x w tygodniu"; Rule 7: "raz w tygodniu") słowa o dzieleniu budżetu z drugą.
+> 09-17 nazwał to Standing Failure 2 i zostawił jako "unfixed w playbooku". Dwa kolejne przebiegi
+> (09-25, 09-26) faktycznie już liczyły oba budżety osobno bez zapisanej podstawy: 09-25 Rule 6
+> wydał 2/2 tygodnia bez sprawdzania Rule 7, a 09-26 Rule 7 odpalił na swojej gałęzi mimo że
+> Rule 6 był już wyczerpany tego samego tygodnia. Ta poprawka zapisuje to, co pętla już robi:
+> **Rule 6 i Rule 7 mają niezależne liczniki**, oba liczone jako tydzień Mon–Sun, zerowane osobno.
+> Nie zmienia dzisiejszego wyniku (2026-09-27: Rule 7 odpalił już wczoraj, więc jest dziś budżetowo
+> zablokowany niezależnie od interpretacji) — zamyka tylko dryf między precedensem a praktyką.
 >
 > **Świadomie NIE zapisane w v4** (dowody jeszcze w locie — zapis przed odczytem to dokładnie ten
 > błąd, dla którego powstało v3):
@@ -424,6 +437,10 @@ redakcyjnej — limit blokuje naprawę, której inaczej zrobić się nie da. Swe
 ### 7. Local Pack Ticket  📍  (MANUALNE — raz w tygodniu)
 
 **Warunek**: piątek lub brak innej akcji technicznej tego dnia.
+
+**Budżet (v6)**: własny licznik, **niezależny od Rule 6** — tydzień Mon–Sun, zerowany osobno.
+Poprzedni precedens "wspólny budżet" z Rule 6 (09-08/09-09/09-11, nazwany Standing Failure 2
+w 09-17) jest tym zapisem zamknięty; 09-25/09-26 już liczyły je osobno w praktyce.
 
 **Akcja**: agent tworzy ticket w logu dnia (NIE modyfikuje GBP bezpośrednio):
 - draft posta GBP (temat + 150 słów, zdjęcie do uploadu z captionem)
