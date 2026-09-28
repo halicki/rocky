@@ -511,6 +511,10 @@ export default function BeginnerSurfLessonsBali() {
             { href: "/blog/learn-to-surf-cant-swim-bali", label: "Can't Swim? Can You Still Surf?" },
             { href: "/blog/what-to-expect-first-surf-lesson-bali", label: "What to Expect on Your First Lesson" },
             { href: "/blog/surfing-bali-complete-beginners-guide", label: "Complete Beginners Guide to Surfing Bali" },
+            { href: "/blog/how-to-pop-up-surfing-bali", label: "How to Pop Up on a Surfboard" },
+            { href: "/blog/what-to-bring-surf-lesson-bali", label: "What to Bring to Your Surf Lesson" },
+            { href: "/blog/how-to-read-a-wave-canggu", label: "How to Read a Wave" },
+            { href: "/blog/bali-surf-itinerary-7-days", label: "7-Day Bali Surf Trip Itinerary" },
           ]}
         />
       </main>
