@@ -600,6 +600,9 @@ export default function SurfLessonPricesBali() {
             { href: "/blog/private-vs-group-surf-lesson-bali", label: "Private vs Group Surf Lessons" },
             { href: "/blog/surf-camp-vs-surf-lessons-bali", label: "Surf Camp vs Surf Lessons" },
             { href: "/blog/surf-lesson-gift-bali", label: "Give a Surf Lesson as a Gift" },
+            { href: "/blog/best-surf-school-bali-how-to-choose", label: "How to Choose the Best Surf School in Bali" },
+            { href: "/blog/surf-lessons-seminyak-kuta-legian", label: "Surf Lessons in Seminyak, Kuta & Legian" },
+            { href: "/blog/canggu-vs-uluwatu-beginners", label: "Canggu vs Uluwatu for Beginners" },
           ]}
         />
       </main>
