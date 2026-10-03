@@ -4,16 +4,16 @@ import { blogPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Surf Blog — Tips & Guides for Beginners | Surfing With Rocky",
+  title: "Bali Surf Blog: 36 Canggu Guides | Surfing With Rocky",
   description:
-    "Surf tips, wave guides, and insider knowledge from Rocky — a professional surf instructor with 20+ years at Batu Bolong Beach, Canggu, Bali.",
+    "36 surf guides from Rocky, a Batu Bolong instructor with 20+ years: Canggu surf forecast, best time to surf, lessons, prices and tips.",
   alternates: {
     canonical: `${SITE_URL}/blog/`,
   },
   openGraph: {
-    title: "Surf Blog — Tips & Guides for Beginners | Surfing With Rocky",
+    title: "Bali Surf Blog: 36 Canggu Guides | Surfing With Rocky",
     description:
-      "Surf tips, wave guides, and insider knowledge from Rocky — Batu Bolong's most experienced surf instructor.",
+      "36 surf guides from Rocky, a Batu Bolong instructor with 20+ years: Canggu surf forecast, best time to surf, lessons, prices and tips.",
     type: "website",
     url: `${SITE_URL}/blog`,
     siteName: "Surfing With Rocky",
