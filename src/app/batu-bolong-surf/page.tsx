@@ -7,9 +7,9 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Surfline Batu Bolong Surf Report & Forecast | Canggu, Bali",
+  title: "Batu Bolong Surf Report vs Surfline: Daily Wave Check",
   description:
-    "Surfline Batu Bolong forecast vs. reality: live surf report, wave height, wind, tide and crowd at Pantai Batu Bolong, Canggu — checked by Rocky every morning.",
+    "Surfline says one thing, the lineup says another. Rocky checks Batu Bolong, Canggu every morning: waves, wind, tide, crowd. Book a lesson on WhatsApp.",
   keywords: [
     "Batu Bolong surf",
     "Batu Bolong surf report",
