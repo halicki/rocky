@@ -8,9 +8,9 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Private Surf Lessons in Bali | Surfing With Rocky",
+  title: "Private Surf Lessons Bali — 1-on-1 From 400K IDR",
   description:
-    "1-on-1 private surf lessons in Bali at Batu Bolong Beach, Canggu. Personalised coaching, faster progress, photos & video included. Open daily 6AM–6PM. From 400K IDR.",
+    "1-on-1 private surf lessons in Bali at Batu Bolong, Canggu. Photos & video included, board free, from 400K IDR. Open 6AM–6PM. Book on WhatsApp.",
   keywords: [
     "private surf lessons Bali",
     "1 on 1 surf lesson Bali",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     canonical: "https://surfingwithrocky.com/private-surf-lesson-bali/",
   },
   openGraph: {
-    title: "Private Surf Lessons in Bali | Surfing With Rocky",
+    title: "Private Surf Lessons Bali — 1-on-1 From 400K IDR",
     description:
-      "1-on-1 private surf lessons in Bali at Batu Bolong Beach, Canggu. Personalised coaching, faster progress, photos & video included. Open daily 6AM–6PM.",
+      "1-on-1 private surf lessons in Bali at Batu Bolong, Canggu. Photos & video included, board free, from 400K IDR. Open 6AM–6PM. Book on WhatsApp.",
     type: "website",
     locale: "en_US",
     url: "https://surfingwithrocky.com/private-surf-lesson-bali/",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Private Surf Lessons in Bali | Surfing With Rocky",
+    title: "Private Surf Lessons Bali — 1-on-1 From 400K IDR",
     description:
       "1-on-1 private surf lessons in Bali at Batu Bolong Beach, Canggu. Personalised coaching, faster progress. From 400K IDR.",
   },
