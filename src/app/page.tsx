@@ -78,6 +78,10 @@ export default function Home() {
           { href: "/blog/surf-camp-vs-surf-lessons-bali", label: "Surf Camp vs Surf Lessons in Bali" },
           { href: "/blog/surf-lessons-for-women-bali", label: "Surf Lessons for Women in Bali" },
           { href: "/blog/do-you-need-to-be-fit-to-surf-bali", label: "Do You Need to Be Fit to Surf?" },
+          { href: "/blog/canggu-vs-uluwatu-beginners", label: "Uluwatu vs Canggu for Beginner Surfers" },
+          { href: "/blog/best-surf-school-bali-how-to-choose", label: "How to Choose a Surf School in Bali" },
+          { href: "/blog/canggu-surfing-safe-for-kids", label: "Is Canggu Surfing Safe for Kids?" },
+          { href: "/blog/what-to-bring-surf-lesson-bali", label: "What to Bring to a Surf Lesson" },
         ]}
       />
       <FinalCTA />
