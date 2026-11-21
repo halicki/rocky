@@ -1,4 +1,4 @@
-# SEO Action Playbook — v6
+# SEO Action Playbook — v7
 
 Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i wybiera **pierwszą**, która pasuje.
 
@@ -58,6 +58,14 @@ Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i
 > **Rule 6 i Rule 7 mają niezależne liczniki**, oba liczone jako tydzień Mon–Sun, zerowane osobno.
 > Nie zmienia dzisiejszego wyniku (2026-09-27: Rule 7 odpalił już wczoraj, więc jest dziś budżetowo
 > zablokowany niezależnie od interpretacji) — zamyka tylko dryf między precedensem a praktyką.
+>
+> **v7 (2026-11-21): Rule 4 — stan crawlu jest w Routine nieweryfikowalny; zapisujemy to, co pętla już robi.**
+> Jedna poprawka, dowody zamknięte. Rule 4 „Uwaga" każe sprawdzić Google Cache/indeksację przed
+> drugim rescue'em, ale Routine nie ma przeglądarki ani URL Inspection. Logi 11-11 i 11-12
+> („Crawl gate: cannot be verified in this Routine — a flat reading before re-crawl is NOT a failure")
+> oraz 11-13 (bramka „crawl" spełniona wyłącznie danymi z zewnątrz, z URL Inspection właściciela
+> z addendum 11-02) i 11-15/11-20 („crawl unknown") stosowały to ad hoc, bez zapisu w regule.
+> Poprawka nie zmienia żadnego progu ani bramki — nazywa praktykę (patrz Rule 4, „Uwaga (v7)").
 >
 > **Świadomie NIE zapisane w v4** (dowody jeszcze w locie — zapis przed odczytem to dokładnie ten
 > błąd, dla którego powstało v3):
@@ -370,6 +378,12 @@ w ciągu ostatnich 14 dni**.
 - title: `<Primary Keyword> | <Konkretna korzyść / liczba> | Surfing With Rocky` — max 60 znaków
 - description: 140–155 znaków, query + rok/cena/liczba + CTA (np. "Book via WhatsApp")
 - dodaj `aggregateRating` w schema jeśli nie ma
+
+**Uwaga (v7)**: w Routine (brak przeglądarki i URL Inspection) stan crawlu po rescue jest
+domyślnie **„unknown"**. Log wpisuje `crawl: unknown`, a odczyt „0 kliknięć przed potwierdzonym
+re-crawlem" **nie jest werdyktem porażki** (jak 11-11/11-12). Crawl jest „potwierdzony" tylko
+datą `lastCrawlTime` z URL Inspection właściciela, zapisaną w logu (jak addendum 11-02). To
+zapis praktyki — nie zmienia progów (≥20 impr, CTR <2%, 14 dni).
 
 **Uwaga**: jeśli strona miała CTR rescue i po 14 dniach dalej 0% CTR — sprawdź Google Cache
 (czy nowy title w ogóle się zaindeksował) zanim zrobisz kolejny rescue.
