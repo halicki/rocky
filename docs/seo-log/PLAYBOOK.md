@@ -67,7 +67,17 @@ Heurystyka wyboru **jednej** akcji dziennie. Agent przechodzi reguły od góry i
 > z addendum 11-02) i 11-15/11-20 („crawl unknown") stosowały to ad hoc, bez zapisu w regule.
 > Poprawka nie zmienia żadnego progu ani bramki — nazywa praktykę (patrz Rule 4, „Uwaga (v7)").
 >
-> **Świadomie NIE zapisane w v4** (dowody jeszcze w locie — zapis przed odczytem to dokładnie ten
+> **v8 (2026-11-28): „HOLD" w liczniku Rule 8 oznacza dzień bez żadnej akcji — dzień Rule 7 go przerywa.**
+Jedna poprawka definicyjna, dowody zamknięte. Rule 8 liczy „≥3 kolejne HOLD-y", ale nigdzie nie
+definiuje, czy log-only dzień Rule 7 (ticket GBP) jest HOLD-em. Logi liczyły to konsekwentnie, lecz
+bez zapisu: 11-22 HOLD → 11-23 Rule 7 (ticket) → 11-24 HOLD („counter 0" po Rule 7, patrz 11-23:
+„only 1 HOLD since META-run") → 11-25 „counter 2" → 11-26 „counter 3" → 11-27 „counter 4"; INDEX
+11-25…11-27 potwierdza ten sam rachunek. Zapis: **HOLD = przebieg bez żadnej akcji (w tym bez
+ticketu Rule 7 i bez META-runu); dzień Rule 7 lub Rule 8 zeruje licznik.** Poprawka niczego nie
+luzuje (ani nie zaostrza) — nie zmienia treści Rule 8, progów ani budżetów, tylko nazywa rachunek,
+którym pętla już się posługuje, żeby kolejny przebieg nie liczył go inaczej.
+
+**Świadomie NIE zapisane w v4** (dowody jeszcze w locie — zapis przed odczytem to dokładnie ten
 > błąd, dla którego powstało v3):
 > - **Ocena pasma na query zamiast na stronie** — czeka na odczyt 08-15 strike'u, **≥2026-08-22**.
 > - **Kolejność drabiny Rule 1 vs Rule 4** — czeka na sparowany odczyt 08-19 + 08-20,
